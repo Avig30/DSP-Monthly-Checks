@@ -1,0 +1,6 @@
+smartsheet-python-sdk>=3.0.0
+playwright>=1.44.0
+pdfplumber>=0.10.0
+reportlab>=4.1.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
