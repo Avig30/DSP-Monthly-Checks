@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root { --color-primary: #0D9488; --color-navy: #1E3A5F; }
+  body { background-color: #F8FAFC; color: #1e293b; }
+}
+@keyframes slideIn { from { opacity:0; transform:translateX(100%) } to { opacity:1; transform:translateX(0) } }
+@keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+.animate-slide-in { animation: slideIn 0.25s ease-out; }
+.animate-fade-in { animation: fadeIn 0.2s ease-out; }
