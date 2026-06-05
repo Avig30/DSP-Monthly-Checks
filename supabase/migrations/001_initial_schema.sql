@@ -6,19 +6,6 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- ============================================================
--- HELPER FUNCTION
--- ============================================================
-
-CREATE OR REPLACE FUNCTION get_my_agency_id()
-RETURNS uuid
-LANGUAGE sql
-STABLE
-SECURITY DEFINER
-AS $$
-  SELECT agency_id FROM user_profiles WHERE id = auth.uid() LIMIT 1;
-$$;
-
--- ============================================================
 -- TABLE: agencies
 -- ============================================================
 
@@ -67,6 +54,19 @@ CREATE TABLE IF NOT EXISTS user_profiles (
 );
 
 ALTER TABLE user_profiles ENABLE ROW LEVEL SECURITY;
+
+-- ============================================================
+-- HELPER FUNCTION (created after user_profiles exists)
+-- ============================================================
+
+CREATE OR REPLACE FUNCTION get_my_agency_id()
+RETURNS uuid
+LANGUAGE sql
+STABLE
+SECURITY DEFINER
+AS $$
+  SELECT agency_id FROM user_profiles WHERE id = auth.uid() LIMIT 1;
+$$;
 
 CREATE POLICY "user_profiles_own" ON user_profiles
   FOR SELECT USING (id = auth.uid());
