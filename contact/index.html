@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | ASG Home Care</title>
+<meta name="description" content="Contact ASG Home Care. Call, email, or send a message - a real person from our team picks up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo-link">
+      <img src="/assets/img/logo.png" alt="ASG Home Care logo">
+      <span class="logo-text">ASG Home Care</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/family-caregivers/" class="active-accent">Get Paid to Care for Family</a>
+      <a href="/services/">Services</a>
+      <a href="/find-a-dsp/">Find a DSP</a>
+      <a href="/become-a-dsp/">Become a DSP</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <a href="tel:+17329934163" class="phone-pill">📞 (732) 993-4163</a>
+  </div>
+</header>
+
+<!-- SECTION 1 - HERO -->
+<section class="hero">
+  <div class="wrap hero-inner single-col">
+    <div>
+      <span class="pill">CONTACT</span>
+      <h1>Contact ASG Home Care</h1>
+      <p class="hero-body">Questions about getting paid to care for a family member? Need a DSP? Just want to understand how DDD (New Jersey's Division of Developmental Disabilities) works? Call, email, or send the form - a real person from our team picks up.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 - CONTACT FORM -->
+<section class="bg-white">
+  <div class="wrap">
+    <form class="form-card" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <h3>Send us a message.</h3>
+      <p class="form-sub">A real person reads every message.</p>
+      <input type="hidden" name="_subject" value="Contact form - asghomecare.com">
+      <input type="text" name="_gotcha" style="display:none">
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="ct-name">Full name</label>
+          <input type="text" id="ct-name" name="Full name" placeholder="Full name" required>
+        </div>
+        <div class="form-field">
+          <label for="ct-am">I am...</label>
+          <select id="ct-am" name="I am" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="A family member interested in getting paid">A family member interested in getting paid</option>
+            <option value="Looking for a DSP for my loved one">Looking for a DSP for my loved one</option>
+            <option value="A support coordinator">A support coordinator</option>
+            <option value="Interested in becoming a DSP">Interested in becoming a DSP</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="ct-email">Email</label>
+          <input type="email" id="ct-email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-field">
+          <label for="ct-phone">Phone</label>
+          <input type="tel" id="ct-phone" name="Phone" placeholder="(732) 555-0123">
+        </div>
+        <div class="form-field full-width">
+          <label for="ct-message">Message</label>
+          <textarea id="ct-message" name="Message" placeholder="Tell us what's going on - we'll take it from there." required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      <p class="form-phone-line">Or call <a href="tel:+17329934163">(732) 993-4163</a> - a real person picks up.</p>
+    </form>
+  </div>
+</section>
+
+<!-- SECTION 3 - QUICK CONTACTS -->
+<section class="bg-light">
+  <div class="wrap">
+    <h2 class="section-heading text-center" style="margin-bottom: 44px;">Quick contacts</h2>
+    <div class="two-col-cards">
+      <div class="card">
+        <h3>Reach us:</h3>
+        <p>1451 NJ-88 Suite 2, Brick, NJ 08724<br>(732) 993-4163<br>info@asghomecare.com</p>
+      </div>
+      <div class="card">
+        <h3>Hours:</h3>
+        <p>Monday-Friday, 9:00 am - 5:00 pm.<br>Urgent issues for current families and DSPs: we answer 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 - TWO PATH CARDS -->
+<section class="bg-white">
+  <div class="wrap">
+    <div class="path-link-cards">
+      <div class="card">
+        <p>Want to get paid to care for a family member? <a href="/family-caregivers/" class="start-link">Start here</a></p>
+      </div>
+      <div class="card">
+        <p>Need a DSP for your loved one? <a href="/find-a-dsp/" class="start-link">Start here</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 - FOOTER -->
+<footer class="site-footer">
+  <img src="/assets/img/logo.png" alt="ASG Home Care logo" style="filter: brightness(0) invert(1);">
+  <div class="footer-contact">1451 NJ-88 Suite 2, Brick, NJ 08724 · (732) 993-4163 · info@asghomecare.com</div>
+  <a href="/faq/" class="faq-link">FAQ</a>
+  <div class="footer-copy">© 2026 ASG Home Care. DDD-approved provider serving all 21 NJ counties.</div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
