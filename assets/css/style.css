@@ -147,13 +147,12 @@ header.site-header {
   padding: 14px 24px;
   max-width: 1140px;
   margin: 0 auto;
-  gap: 24px;
+  gap: 20px;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 10px;
   flex-shrink: 0;
 }
 
@@ -163,22 +162,15 @@ header.site-header {
   object-fit: contain;
 }
 
-.logo-link .logo-text {
-  font-weight: 800;
-  color: var(--navy);
-  font-size: 17px;
-  line-height: 1.1;
-}
-
 nav.main-nav {
   display: flex;
   align-items: center;
-  gap: 26px;
-  flex-wrap: wrap;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 nav.main-nav a {
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 600;
   color: var(--navy);
   white-space: nowrap;
@@ -199,8 +191,8 @@ nav.main-nav a:hover {
   background: var(--teal);
   color: var(--white);
   font-weight: 800;
-  font-size: 14px;
-  padding: 10px 20px;
+  font-size: 13.5px;
+  padding: 9px 16px;
   border-radius: 999px;
   white-space: nowrap;
   flex-shrink: 0;
@@ -295,10 +287,13 @@ nav.main-nav a:hover {
 
 .path-cards .card {
   padding: 36px;
+  display: flex;
+  flex-direction: column;
 }
 
 .path-cards h3 { font-size: 22px; margin-bottom: 12px; }
-.path-cards p { margin-bottom: 20px; }
+.path-cards p { margin-bottom: 20px; flex: 1; }
+.path-cards .card .btn { margin-top: auto; align-self: flex-start; }
 
 /* Stats bar */
 .stats-bar {
@@ -491,29 +486,41 @@ footer.site-footer {
   background: var(--navy);
   color: #C8D6E0;
   text-align: center;
-  padding: 48px 24px;
+  padding: 40px 24px;
 }
 
-footer.site-footer img {
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.footer-logo {
   height: 44px;
   width: 44px;
-  margin: 0 auto 16px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
+  flex-shrink: 0;
 }
 
 footer.site-footer .footer-contact {
   font-size: 14.5px;
-  margin-bottom: 14px;
+  flex: 1;
+  text-align: center;
 }
 
 footer.site-footer a.faq-link {
   text-decoration: underline;
   color: #C8D6E0;
   font-size: 14px;
+  flex-shrink: 0;
 }
 
 footer.site-footer .footer-copy {
-  margin-top: 14px;
+  margin-top: 20px;
   font-size: 13px;
   color: #9FB4C4;
 }
@@ -719,6 +726,15 @@ footer.site-footer .footer-copy {
 
   .nav-toggle {
     display: block;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer.site-footer .footer-contact {
+    flex: none;
   }
 
   section {
