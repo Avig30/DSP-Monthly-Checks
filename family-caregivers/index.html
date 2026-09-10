@@ -12,8 +12,6 @@
 </head>
 <body>
 
-<div class="stub-banner">STUB PAGE - placeholder content pending owner approval. Not final copy.</div>
-
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
@@ -35,7 +33,7 @@
   </div>
 </header>
 
-<!-- SECTION 1 - HERO (reusing approved Home Section 2 / Section 4 copy as placeholder content path) -->
+<!-- SECTION 1 - HERO -->
 <section class="hero">
   <div class="wrap hero-inner single-col">
     <div>
@@ -43,7 +41,7 @@
       <h1>You're already doing the caring. You may be able to get paid for it.</h1>
       <p class="hero-body">Meals, routines, medications, appointments - that's real work, and it can be paid. We help parents, siblings, and relatives become paid DSPs for their own family members. And we stay involved: training, scheduling, and a real person to call.</p>
       <div class="btn-row">
-        <a href="/contact/" class="btn btn-primary">Speak With a Specialist</a>
+        <a href="#check-form" class="btn btn-primary">See If You Qualify</a>
         <a href="tel:+17329934163" class="btn btn-secondary">Call (732) 993-4163</a>
       </div>
       <p class="hero-line-small">Serving all 21 New Jersey counties. No cost to your family, ever.</p>
@@ -51,18 +49,146 @@
   </div>
 </section>
 
-<!-- SECTION 2 - PLACEHOLDER NOTE -->
+<!-- SECTION 2 - HOW IT WORKS -->
+<section class="bg-white">
+  <div class="wrap">
+    <h2 class="section-heading" style="margin-bottom: 44px;">How it works</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="step-circle">1</div>
+        <h3>Tell us about your family</h3>
+        <p>The short form below or a quick call - either works. We listen first, then explain your options in plain language.</p>
+      </div>
+      <div class="card">
+        <div class="step-circle">2</div>
+        <h3>We confirm eligibility</h3>
+        <p>We confirm your family member's DDD (New Jersey's Division of Developmental Disabilities) eligibility and handle the enrollment paperwork with you. Not approved yet? We will tell you exactly what to do.</p>
+      </div>
+      <div class="card">
+        <div class="step-circle">3</div>
+        <h3>You get trained - free</h3>
+        <p>You complete the required DSP training at no cost to your family, with our team walking you through every step.</p>
+      </div>
+      <div class="card">
+        <div class="step-circle">4</div>
+        <h3>You become the paid DSP</h3>
+        <p>You care for your loved one as their paid DSP. We run payroll and scheduling, and we stay one phone call away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 - WHAT THE ROLE LOOKS LIKE (photo right) -->
+<section class="bg-light">
+  <div class="wrap split-section">
+    <div>
+      <h2 class="section-heading">The care you already give, now as a paid role.</h2>
+      <p class="section-intro-body" style="margin-top: 18px; margin-bottom: 28px;">Daily routines, meals, medications, appointments, community time, life skills - as your family member's DSP, the support you already provide becomes trained, paid work, with a full agency behind you.</p>
+      <a href="#check-form" class="btn btn-primary">See If You Qualify</a>
+    </div>
+    <div>
+      <img src="/assets/img/section4-home.jpg" alt="Family member and young man learning together at a kitchen table">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 - WHY FAMILIES CHOOSE ASG -->
+<section class="bg-white">
+  <div class="wrap">
+    <h2 class="section-heading" style="margin-bottom: 44px;">Why families choose ASG</h2>
+    <div class="card-grid cols-2">
+      <div class="card check-item">
+        <span class="check-glyph">✓</span>
+        <p><strong>We handle the paperwork</strong> - enrollment, training, scheduling, and payroll, start to finish.</p>
+      </div>
+      <div class="card check-item">
+        <span class="check-glyph">✓</span>
+        <p><strong>No cost to your family</strong> - ever.</p>
+      </div>
+      <div class="card check-item">
+        <span class="check-glyph">✓</span>
+        <p>Real training and ongoing coaching for family DSPs</p>
+      </div>
+      <div class="card check-item">
+        <span class="check-glyph">✓</span>
+        <p>24/7 support from a team that answers the phone</p>
+      </div>
+      <div class="card check-item">
+        <span class="check-glyph">✓</span>
+        <p>DDD expertise - we work inside New Jersey's DDD system every day</p>
+      </div>
+      <div class="card check-item">
+        <span class="check-glyph">✓</span>
+        <p>Serving all 21 New Jersey counties</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 - ELIGIBILITY FORM -->
+<section class="bg-light" id="check-form">
+  <div class="wrap">
+    <form class="form-card" action="https://formspree.io/f/mvkodreg" method="POST">
+      <h3>Find out if you qualify.</h3>
+      <p class="form-sub">Tell us about your family. We will call you back and walk you through the next step.</p>
+      <input type="hidden" name="_subject" value="Get Paid to Care for Family inquiry - asghomecare.com">
+      <input type="text" name="_gotcha" style="display:none">
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="fc-name">Name</label>
+          <input type="text" id="fc-name" name="Name" placeholder="Full name" required>
+        </div>
+        <div class="form-field">
+          <label for="fc-phone">Phone</label>
+          <input type="tel" id="fc-phone" name="Phone" placeholder="(732) 555-0123" required>
+        </div>
+        <div class="form-field">
+          <label for="fc-email">Email</label>
+          <input type="email" id="fc-email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-field">
+          <label for="fc-county">County</label>
+          <input type="text" id="fc-county" name="County" placeholder="NJ county" required>
+        </div>
+        <div class="form-field">
+          <label for="fc-relationship">Your relationship</label>
+          <select id="fc-relationship" name="Relationship" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Parent">Parent</option>
+            <option value="Sibling">Sibling</option>
+            <option value="Other relative">Other relative</option>
+            <option value="Support coordinator">Support coordinator</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="fc-eligibility">Does your family member have DDD eligibility?</label>
+          <select id="fc-eligibility" name="DDD eligibility" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Yes">Yes</option>
+            <option value="Not yet">Not yet</option>
+            <option value="Not sure">Not sure</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Start Here</button>
+      <p class="form-phone-line">Or call <a href="tel:+17329934163">(732) 993-4163</a> - a real person picks up.</p>
+    </form>
+  </div>
+</section>
+
+<!-- SECTION 6 - CLOSING CTA -->
 <section class="bg-white">
   <div class="wrap text-center" style="max-width: 780px;">
-    <h2 class="section-heading">More on how it works is coming soon.</h2>
-    <p class="section-intro-body" style="margin-top: 18px; margin-bottom: 28px;">If your family member qualifies for New Jersey's DDD program, you can become their paid DSP - we handle the paperwork, training, and payroll.</p>
+    <h2 class="section-heading">You bring the love. We handle the paperwork.</h2>
+    <p class="section-intro-body" style="margin-top: 18px; margin-bottom: 28px;">Enrollment, training, scheduling, payroll - our team works inside New Jersey's DDD system every day, so you can focus on your family.</p>
     <div class="btn-row" style="justify-content: center;">
+      <a href="/contact/" class="btn btn-primary">Speak With a Specialist</a>
       <a href="/services/" class="btn btn-secondary">See All Services</a>
     </div>
   </div>
 </section>
 
-<!-- SECTION 3 - FOOTER -->
+<!-- SECTION 7 - FOOTER -->
 <footer class="site-footer">
   <div class="footer-row">
     <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
