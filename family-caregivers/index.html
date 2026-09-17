@@ -24,38 +24,25 @@
   gtag('js', new Date());
   gtag('config', 'G-0JS8RNTLKC');
 </script>
-<!-- Page-scoped warmth treatment for this page only - does not touch /assets/css/style.css -->
+<!-- Page-scoped: only the 3-column promise layout, which has no equivalent in
+     the shared stylesheet. Everything else on this page reuses existing
+     site classes and colors - assets/css/style.css itself is untouched. -->
 <style>
-  .pfcp-warm .cream-bg { background: #FBF6EC; }
-  .pfcp-warm .sand-bg { background: #F1E6D3; }
-  .pfcp-warm .pfcp-airy { padding: 96px 0; }
-  .pfcp-warm .section-heading { font-size: 40px; }
-  .pfcp-warm .section-intro-body { font-size: 19px; line-height: 1.7; }
-  .pfcp-warm .promise-grid {
+  .promise-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 36px;
   }
-  .pfcp-warm .promise-item { text-align: center; }
-  .pfcp-warm .promise-icon { font-size: 38px; margin-bottom: 16px; }
-  .pfcp-warm .promise-item h3 { font-size: 20px; margin-bottom: 10px; }
-  .pfcp-warm .promise-item p { color: var(--muted); font-size: 16px; line-height: 1.6; }
-  .pfcp-warm .photo-caption {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--navy);
-    margin-top: 24px;
-  }
-  .pfcp-warm .light-check-grid .check-item { padding: 4px 0; }
+  .promise-item { text-align: center; }
+  .promise-icon { font-size: 34px; margin-bottom: 14px; }
+  .promise-item h3 { font-size: 18px; margin-bottom: 8px; }
+  .promise-item p { color: var(--muted); font-size: 15.5px; }
   @media (max-width: 900px) {
-    .pfcp-warm .promise-grid { grid-template-columns: 1fr; }
-    .pfcp-warm .section-heading { font-size: 30px; }
-    .pfcp-warm .pfcp-airy { padding: 56px 0; }
+    .promise-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
-<body class="pfcp-warm">
+<body>
 
 <header class="site-header">
   <div class="header-inner">
@@ -84,21 +71,21 @@
     <div>
       <span class="pill">ASG PAID FAMILY CARE PROGRAM</span>
       <h1>Get paid to care for your loved one.</h1>
-      <p class="hero-body">You already care for them out of love. ASG helps turn that care into a paid job, and you never have to figure it out alone.</p>
+      <p class="hero-body">You care for them every day. We stay with you every step.</p>
+      <p class="hero-body" style="font-size: 16px; margin-top: -14px; margin-bottom: 28px;">ASG helps turn the care you already give into a paid role, and guides your family through every step of the process.</p>
       <div class="btn-row">
         <a href="#start-here" class="btn btn-primary">Tell Us About Your Family</a>
-        <a href="tel:+17329934163" class="btn btn-secondary">Call (732) 993-4163, press 3</a>
       </div>
-      <p class="hero-line-small">Serving families in all 21 New Jersey counties.</p>
+      <p class="hero-line-small">Prefer to call? <a href="tel:+17329934163">(732) 993-4163, press 3</a>.</p>
     </div>
     <div class="hero-photo">
-      <img src="/assets/img/pfcp-hero-mother-daughter-kitchen.jpg" alt="An adult daughter serving tea to her mother at their kitchen table">
+      <img src="/assets/img/pfcp-hero-family.jpg" alt="A mother, father, and their daughter, who has Down syndrome, smiling closely together">
     </div>
   </div>
 </section>
 
 <!-- SECTION 2 - SOMEONE IS ALWAYS THERE -->
-<section class="cream-bg pfcp-airy">
+<section class="bg-light">
   <div class="wrap">
     <h2 class="section-heading text-center" style="margin-bottom: 44px;">Someone is always there.</h2>
     <div class="promise-grid">
@@ -146,78 +133,19 @@
 </section>
 
 <!-- SECTION 4 - ONE PERSON WHO KNOWS YOUR FAMILY -->
-<section class="sand-bg pfcp-airy">
-  <div class="wrap text-center" style="max-width: 780px;">
+<section class="bg-light">
+  <div class="wrap text-center" style="max-width: 700px;">
     <h2 class="section-heading">One person who knows your family.</h2>
-    <p class="section-intro-body" style="margin-top: 18px; margin-bottom: 28px;">Your Family Program Coordinator stays with your family from the first call through ongoing services. If it's easier, they can meet you at home and walk you through every step in person.</p>
-    <a href="tel:+17329934163" class="btn btn-primary">Talk With ASG</a>
+    <p class="section-intro-body" style="margin-top: 18px;">Your Family Program Coordinator listens, keeps you updated, and stays with your family from the first call through ongoing services. If you prefer, someone from ASG can meet you at home and walk you through every step.</p>
   </div>
 </section>
 
-<!-- SECTION 5 - WHAT ASG HELPS WITH -->
-<section class="cream-bg">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">What ASG helps with</h2>
-    <div class="card-grid cols-2 light-check-grid">
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>DDD application next-step guidance</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>Regular W-2 DSP onboarding and required training</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>Support-coordinator coordination with the family's permission</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>SDR service and approved-hours review</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>HHAeXchange app or paper-timesheet setup</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>A practice timekeeping entry before the first shift</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>A 48-hour start check and monthly family support</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 6 - CLEAR EXPECTATIONS -->
-<section class="bg-white">
-  <div class="wrap">
-    <div class="section-intro" style="margin-bottom: 0;">
-      <h2 class="section-heading">You always know what comes next</h2>
-      <p class="section-intro-body" style="margin-top: 18px;">We move quickly on the parts we control. The start depends on DDD approval, the support coordinator's SDR, approved service and hours, active authorization, and completion of every employment requirement. Your Family Program Coordinator keeps you updated so each next step is clear.</p>
-      <p class="section-intro-body" style="margin-top: 18px;">ASG works directly with your support coordinator after you give permission. You do not need to send ASG your ISP or PCPT for this program handoff.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 7 - SECOND WARM PHOTO -->
-<section class="sand-bg pfcp-airy">
-  <div class="wrap" style="max-width: 820px;">
-    <div class="hero-photo">
-      <img src="/assets/img/pfcp-daughter-mother-garden.jpg" alt="An adult daughter embracing her elderly mother outdoors in a garden">
-    </div>
-    <p class="photo-caption">This is what having someone in your corner feels like.</p>
-  </div>
-</section>
-
-<!-- SECTION 8 - LEAD FORM -->
-<section class="cream-bg" id="start-here">
+<!-- SECTION 5 - LEAD FORM -->
+<section class="bg-white" id="start-here">
   <div class="wrap">
     <form class="form-card" action="https://formspree.io/f/mvkodreg" method="POST">
-      <h3>Start with one conversation</h3>
-      <p class="form-sub">Tell us about your family. Your Family Program Coordinator will listen, answer in plain language, and explain the next step. No pressure.</p>
+      <h3>Start with one conversation.</h3>
+      <p class="form-sub">Tell us about your family. We'll listen, answer in plain language, and explain the next step. No pressure.</p>
       <input type="hidden" name="_subject" value="ASG Paid Family Care Program inquiry - asghomecare.com">
       <input type="text" name="_gotcha" style="display:none">
       <div class="form-grid">
@@ -257,62 +185,50 @@
           </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Start Here</button>
-      <p class="form-phone-line">Prefer to talk it through? Call <a href="tel:+17329934163">(732) 993-4163, press 3</a> - a real person picks up.</p>
+      <button type="submit" class="btn btn-primary btn-block">Tell Us About Your Family</button>
+      <p class="form-phone-line">Prefer to talk it through? Call <a href="tel:+17329934163">(732) 993-4163, press 3</a>.</p>
     </form>
   </div>
 </section>
 
-<!-- SECTION 9 - FAQ -->
-<section class="sand-bg">
+<!-- SECTION 6 - FAQ -->
+<section class="bg-light">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 44px;">Frequently asked questions</h2>
     <div class="card-grid cols-2">
       <div class="card">
-        <h3>Can a relative or trusted person become the paid DSP?</h3>
-        <p>Yes. The person is hired as a regular ASG W-2 DSP and completes the same required hiring, checks, training and timekeeping setup as other DSPs.</p>
+        <h3>Can a relative or trusted person be paid to help?</h3>
+        <p>Yes. A parent, sibling, or other trusted person can become paid as their loved one's DSP (Direct Support Professional).</p>
       </div>
       <div class="card">
-        <h3>Does my family member need DDD approval already?</h3>
-        <p>You can call ASG at any stage. Once the DDD application is complete, DSP onboarding can begin while approval is pending. Paid services begin only after authorization is active.</p>
+        <h3>What happens first?</h3>
+        <p>You call or send the short form. Your Family Program Coordinator listens, explains the program, and lets you know the next step.</p>
       </div>
       <div class="card">
-        <h3>Who sets the weekly schedule?</h3>
-        <p>Your family chooses the schedule within the approved service hours.</p>
+        <h3>Can ASG meet with our family at home?</h3>
+        <p>Yes. If you prefer, someone from ASG can visit your home and walk you through the process in person.</p>
       </div>
       <div class="card">
-        <h3>Will ASG contact my support coordinator?</h3>
-        <p>Only with your permission. Your Family Program Coordinator contacts the coordinator to confirm the service, the SDR hours and the remaining steps.</p>
-      </div>
-      <div class="card">
-        <h3>How do I track time?</h3>
-        <p>You can use the HHAeXchange app or a paper timesheet. Your Family Program Coordinator helps set up the option you choose and practices it with you before the first shift.</p>
-      </div>
-      <div class="card">
-        <h3>How much is the pay?</h3>
-        <p>The final hourly rate depends on the approved service, hours and available budget. ASG confirms the rate with you before the written offer.</p>
-      </div>
-      <div class="card">
-        <h3>Can someone meet us at home?</h3>
-        <p>Yes. An ASG team member can come to your family's home and walk you through the process.</p>
+        <h3>What support continues after services begin?</h3>
+        <p>Your Family Program Coordinator stays in touch and continues supporting your family for as long as services continue.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 10 - CLOSING -->
+<!-- SECTION 7 - FINAL CTA -->
 <section class="bg-white">
-  <div class="wrap text-center" style="max-width: 780px;">
+  <div class="wrap text-center" style="max-width: 700px;">
     <h2 class="section-heading">You don't have to do this alone.</h2>
-    <p class="section-intro-body" style="margin-top: 18px; margin-bottom: 28px;">The care is already there. ASG helps it become a paid role for someone your family trusts.</p>
+    <p class="section-intro-body" style="margin-top: 18px; margin-bottom: 28px;">ASG helps turn the care you already give into a paid role, with support every step of the way.</p>
     <div class="btn-row" style="justify-content: center;">
       <a href="#start-here" class="btn btn-primary">Tell Us About Your Family</a>
-      <a href="tel:+17329934163" class="btn btn-secondary">Call (732) 993-4163, press 3</a>
     </div>
+    <p class="hero-line-small" style="margin-top: 18px;">Prefer to call? <a href="tel:+17329934163">(732) 993-4163, press 3</a>.</p>
   </div>
 </section>
 
-<!-- SECTION 11 - FOOTER -->
+<!-- SECTION 8 - FOOTER -->
 <footer class="site-footer">
   <div class="footer-row">
     <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
