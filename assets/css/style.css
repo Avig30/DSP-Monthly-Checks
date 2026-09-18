@@ -1137,6 +1137,7 @@ a:focus-visible {
   z-index: 0;
 }
 .hero-gradient .wrap,
+.hero-gradient .wrap-wide,
 .hero-gradient .wrap-narrow { position: relative; z-index: 1; }
 .hero-gradient .eyebrow-lg { color: var(--white); }
 .hero-gradient .eyebrow-lg::before { background: var(--white); }
@@ -1151,6 +1152,38 @@ a:focus-visible {
   .hero-gradient .leaf-accent { animation: leafDrift 10s ease-in-out infinite alternate; }
 }
 @keyframes leafDrift { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(-14px) rotate(6deg); } }
+
+/* Benefit chip cloud — flexible wrapped pills, distinct from a card grid */
+.chip-cloud { display: flex; flex-wrap: wrap; gap: 14px; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.chip .chip-glyph { color: var(--teal); font-size: 16px; }
+
+/* Inline highlight callout banner (e.g. cross-link to another route) */
+.callout-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  background: var(--green-tint);
+  border: 1px solid #DCEAC9;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+.callout-banner p { color: var(--body-text); font-size: 16px; font-weight: 600; }
+.callout-banner a.callout-link { color: var(--teal-dark); font-weight: 800; white-space: nowrap; }
 
 /* Alternating vertical timeline (distinct from .process-rail's
    horizontal connected-circle layout) */
