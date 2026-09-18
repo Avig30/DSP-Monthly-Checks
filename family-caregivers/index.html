@@ -123,6 +123,38 @@
 
   .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
+  /* Non-photo brand panel - used where no authentic adult-only photo was
+     available, instead of reusing a person shown elsewhere on the page */
+  .brand-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 24px 48px rgba(24,61,87,.16);
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #EAF6F2 0%, #F5FAF8 55%, #EEF5E7 100%);
+  }
+  .brand-panel::before,
+  .brand-panel::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(46px);
+  }
+  .brand-panel::before { width: 220px; height: 220px; background: rgba(18,113,113,.28); top: -60px; left: -50px; }
+  .brand-panel::after { width: 200px; height: 200px; background: rgba(154,197,125,.4); bottom: -60px; right: -40px; }
+  .content-row .brand-panel img,
+  .brand-panel img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 88px;
+    height: 88px;
+    max-width: 88px;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: .85;
+  }
+
   /* Hero campaign treatment - page-local only, shared .hero class on every
      other page is untouched */
   .hero-campaign {
@@ -350,8 +382,8 @@
       <p class="section-intro-body" style="margin-top: 18px;">This page is for New Jersey families of an adult with an intellectual or developmental disability - enrolled with NJ DDD or possibly eligible - who want to get paid for the caregiving they already do, not eldercare or paid family leave.</p>
       <p class="section-intro-body" style="margin-top: 14px;">Years of appointments, routines, and advocacy - you've already done the hard part.</p>
     </div>
-    <div class="hero-photo">
-      <img src="/assets/img/pfcp-family-wheelchair.webp" alt="A father standing with his young daughter, who uses a wheelchair, on an outdoor terrace in New Jersey" loading="lazy">
+    <div class="hero-photo brand-panel" role="img" aria-label="ASG Home Care brand mark">
+      <img src="/assets/img/logo.png" alt="">
     </div>
   </div>
 </section>
@@ -413,7 +445,7 @@
 <section class="bg-white reveal">
   <div class="wrap content-row">
     <div class="hero-photo">
-      <img src="/assets/img/pfcp-family-blocks.webp" alt="A mother and her young daughter, who has Down syndrome, playing together at home in New Jersey" loading="lazy">
+      <img src="/assets/img/pfcp-adult-boxing.webp" alt="An adult woman with Down syndrome training with her coach in a New Jersey gym" loading="lazy">
     </div>
     <div>
       <h2 class="section-heading" style="margin-bottom: 24px;">Who qualifies?</h2>
