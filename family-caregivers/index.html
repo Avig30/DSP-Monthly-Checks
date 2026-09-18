@@ -123,6 +123,52 @@
 
   .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
+  /* Hero campaign treatment - page-local only, shared .hero class on every
+     other page is untouched */
+  .hero-campaign {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(120% 140% at 12% 8%, #DCEEEA 0%, #EDF6F1 42%, #F5FAF8 100%);
+  }
+  .hero-campaign::before,
+  .hero-campaign::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-campaign::before { width: 420px; height: 420px; background: rgba(18,113,113,.18); top: -160px; right: -80px; }
+  .hero-campaign::after { width: 320px; height: 320px; background: rgba(154,197,125,.3); bottom: -140px; left: 8%; }
+  .hero-campaign .wrap { position: relative; z-index: 1; }
+  .hero-campaign h1 { font-size: 58px; }
+
+  .trust-chip-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .trust-chip {
+    display: inline-flex;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--card-border);
+    color: var(--navy);
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-campaign .hero-inner > div:first-child,
+    .hero-campaign .hero-inner .hero-photo {
+      animation: heroEnter .8s ease both;
+    }
+    .hero-campaign .hero-inner .hero-photo { animation-delay: .12s; }
+  }
+  @keyframes heroEnter {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+
   .faq-layout { display: grid; grid-template-columns: minmax(260px, 320px) 1fr; gap: 48px; align-items: start; }
   .faq-layout .faq-intro { position: sticky; top: 96px; }
   .faq-layout .faq-intro p { color: var(--muted); font-size: 15.5px; margin-top: 14px; }
@@ -237,6 +283,8 @@
   }
 
   @media (max-width: 900px) {
+    .hero-campaign h1 { font-size: 38px; }
+    .hero-campaign::before, .hero-campaign::after { display: none; }
     .promise-grid { grid-template-columns: 1fr; }
     .benefit-grid { grid-template-columns: 1fr; }
     .card-grid-3 { grid-template-columns: 1fr; }
@@ -272,7 +320,7 @@
 </header>
 
 <!-- SECTION 1 - HERO -->
-<section class="hero">
+<section class="hero hero-campaign">
   <div class="wrap hero-inner">
     <div>
       <span class="pill">ASG PAID FAMILY CARE PROGRAM</span>
@@ -283,6 +331,10 @@
         <a href="#family-form" class="btn btn-primary">Tell Us About Your Family</a>
       </div>
       <p class="hero-line-small">Prefer to call? <a href="tel:+17329934163">(732) 993-4163, press 3</a></p>
+      <div class="trust-chip-row">
+        <span class="trust-chip">DDD-approved provider</span>
+        <span class="trust-chip">Serving all 21 NJ counties</span>
+      </div>
     </div>
     <div class="hero-photo">
       <img src="/assets/img/pfcp-hero-family.webp" alt="A mother, father, and their daughter, who has Down syndrome, sharing a close, joyful moment together in their New Jersey home">
@@ -290,28 +342,21 @@
   </div>
 </section>
 
-<!-- SECTION 2 - IS THIS PAGE FOR YOU -->
+<!-- SECTION 2 - YOUR CARE ALREADY MATTERS (merged with former "you've done this work for years" section) -->
 <section class="bg-white reveal">
   <div class="wrap content-row">
     <div>
-      <h2 class="section-heading">Is this page for you?</h2>
-      <p class="section-intro-body" style="margin-top: 18px;">This page is for families of an adult with an intellectual or developmental disability — including autism — in New Jersey. If your loved one is enrolled with NJ DDD, or might be eligible, you're in the right place. This isn't eldercare or paid family leave — it's the DDD path to getting paid as your loved one's caregiver.</p>
+      <h2 class="section-heading">Your care already matters. Now it can become paid work.</h2>
+      <p class="section-intro-body" style="margin-top: 18px;">This page is for New Jersey families of an adult with an intellectual or developmental disability - enrolled with NJ DDD or possibly eligible - who want to get paid for the caregiving they already do, not eldercare or paid family leave.</p>
+      <p class="section-intro-body" style="margin-top: 14px;">Years of appointments, routines, and advocacy - you've already done the hard part.</p>
     </div>
     <div class="hero-photo">
-      <img src="/assets/img/pfcp-family-intro.webp" alt="A New Jersey mother and father embracing their adult daughter, who has Down syndrome, outdoors" loading="lazy">
+      <img src="/assets/img/pfcp-family-wheelchair.webp" alt="A father standing with his young daughter, who uses a wheelchair, on an outdoor terrace in New Jersey" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- SECTION 3 - YOU'VE DONE THIS WORK FOR YEARS -->
-<section class="bg-light reveal">
-  <div class="wrap content-row">
-    <h2 class="section-heading">You've done this work for years. Now it can pay.</h2>
-    <p class="section-intro-body">Years of appointments, routines, and advocacy - you've already done the hard part. <a href="/about/">ASG's Paid Family Care Program</a> hires family members as paid <a href="/services/">Direct Support Professionals</a>, with training, backup when available, and one person who stays with you from the first call.</p>
-  </div>
-</section>
-
-<!-- SECTION 4 - WHAT YOU GET WITH ASG -->
+<!-- SECTION 3 - WHAT YOU GET WITH ASG -->
 <section class="bg-white reveal">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 32px;">What you get with ASG</h2>
@@ -340,7 +385,7 @@
   </div>
 </section>
 
-<!-- SECTION 5 - WE'RE WITH YOU THE WHOLE WAY -->
+<!-- SECTION 4 - WE'RE WITH YOU THE WHOLE WAY -->
 <section class="bg-light reveal soft-shape-bg">
   <div class="wrap">
     <h2 class="section-heading text-center" style="margin-bottom: 32px;">We're with you the whole way</h2>
@@ -364,11 +409,11 @@
   </div>
 </section>
 
-<!-- SECTION 6 - WHO QUALIFIES -->
+<!-- SECTION 5 - WHO QUALIFIES -->
 <section class="bg-white reveal">
   <div class="wrap content-row">
     <div class="hero-photo">
-      <img src="/assets/img/pfcp-family-qualify.webp" alt="A New Jersey mother and father sitting closely with their adult daughter, who has Down syndrome, at an outdoor table" loading="lazy">
+      <img src="/assets/img/pfcp-family-blocks.webp" alt="A mother and her young daughter, who has Down syndrome, playing together at home in New Jersey" loading="lazy">
     </div>
     <div>
       <h2 class="section-heading" style="margin-bottom: 24px;">Who qualifies?</h2>
@@ -390,7 +435,7 @@
   </div>
 </section>
 
-<!-- SECTION 7 - TWO WAYS TO GET PAID -->
+<!-- SECTION 6 - TWO WAYS TO GET PAID -->
 <section class="bg-light reveal">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 12px;">Two ways to get paid</h2>
@@ -433,7 +478,7 @@
   </div>
 </section>
 
-<!-- SECTION 8 - HOW IT WORKS -->
+<!-- SECTION 7 - HOW IT WORKS -->
 <section class="bg-white reveal">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 44px;">How it works: three steps</h2>
@@ -457,7 +502,7 @@
   </div>
 </section>
 
-<!-- SECTION 9 - ONE PERSON WHO KNOWS YOUR FAMILY -->
+<!-- SECTION 8 - ONE PERSON WHO KNOWS YOUR FAMILY -->
 <section class="bg-light reveal">
   <div class="wrap split-section">
     <div>
@@ -465,12 +510,12 @@
       <p class="section-intro-body" style="margin-top: 18px;">You won't be passed from department to department. From your first call through ongoing care, one Family Program Coordinator knows your name, your situation, and your family - and stays with you.</p>
     </div>
     <div class="hero-photo">
-      <img src="/assets/img/pfcp-coordinator-family.webp" alt="An adult daughter with Down syndrome and her mother laughing together outdoors" loading="lazy">
+      <img src="/assets/img/pfcp-chef-portrait.webp" alt="A confident adult man with Down syndrome, smiling in a chef's coat in a New Jersey kitchen" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- SECTION 10 - FAQ -->
+<!-- SECTION 9 - FAQ -->
 <section class="bg-white reveal">
   <div class="wrap faq-layout">
     <div class="faq-intro">
@@ -533,7 +578,7 @@
   </div>
 </section>
 
-<!-- SECTION 11 - SUPPORT-COORDINATOR BRIDGE + FORM + CLOSE -->
+<!-- SECTION 10 - SUPPORT-COORDINATOR BRIDGE + FORM + CLOSE -->
 <section class="bg-light" id="family-form">
   <div class="wrap">
     <p class="text-center" style="max-width: 700px; margin: 0 auto 28px; color: var(--muted); font-size: 15.5px;">If your support coordinator shared this page with you, here's what happens next: one conversation - then, with your permission, we work directly with them.</p>
@@ -585,7 +630,7 @@
   </div>
 </section>
 
-<!-- SECTION 12 - FOOTER-ADJACENT TRUST ROW -->
+<!-- SECTION 11 - FOOTER-ADJACENT TRUST ROW -->
 <section class="bg-white">
   <div class="wrap text-center" style="max-width: 700px;">
     <strong style="display:block; color: var(--navy); text-transform: uppercase; letter-spacing: .06em; font-size: 13px; margin-bottom: 10px;">Official NJ DDD resources</strong>

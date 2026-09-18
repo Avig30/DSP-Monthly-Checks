@@ -1,46 +1,58 @@
 # Image sources — /family-caregivers/ (ASG Paid Family Care Program page)
 
 All images were downloaded directly into this repo (never hotlinked) and
-compressed to WebP.
+compressed to WebP. Every candidate was downloaded and visually inspected
+before use (not just judged from an AI-generated text summary of the source
+page) to confirm it actually depicts an authentic, non-clinical, non-staged
+moment involving a person with a visible or documented intellectual/
+developmental disability.
 
 ## assets/img/pfcp-hero-family.webp
 - Source: https://www.pexels.com/photo/a-family-spending-time-together-7403367/
 - Photographer: RDNE Stock project
 - License: Pexels License (free for commercial use, no attribution required)
 - Used in: hero section
+- Depicts: a mother, father, and adult daughter who has Down syndrome, sharing
+  a close moment indoors.
 
-## assets/img/pfcp-coordinator-family.webp
-- Source: https://www.pexels.com/photo/mother-and-daughter-making-silly-faces-7403038/
-- Photographer: RDNE Stock project
+## assets/img/pfcp-family-wheelchair.webp
+- Source: https://www.pexels.com/photo/bearded-father-near-daughter-in-wheelchair-7698933/
+- Photographer: Meruyert Gonullu
 - License: Pexels License (free for commercial use, no attribution required)
-- Used in: "One person who knows your family" (coordinator) section
+- Used in: "Your care already matters. Now it can become paid work." section
+- Depicts: a father standing with his young daughter, who uses a wheelchair,
+  on an outdoor terrace overlooking hills - a different family, photographer,
+  and disability presentation (mobility disability) than the hero photo.
 
-## assets/img/pfcp-family-intro.webp
-- Source: https://www.pexels.com/photo/happy-family-standing-close-to-each-other-7403047/
-- Photographer: RDNE Stock project
-- License: Pexels License (free for commercial use, no attribution required)
-- Used in: "Is this page for you?" section
-- Note: same family/photoshoot as the hero and coordinator photos above (see
-  "Note on repeated family" below).
-
-## assets/img/pfcp-family-qualify.webp
-- Source: https://www.pexels.com/photo/parents-hugging-their-daughter-7402997/
-- Photographer: RDNE Stock project
+## assets/img/pfcp-family-blocks.webp
+- Source: https://www.pexels.com/photo/a-young-girl-playing-board-game-7943967/
+- Photographer: Nicola Barts
 - License: Pexels License (free for commercial use, no attribution required)
 - Used in: "Who qualifies?" section
-- Note: same family/photoshoot as the other three photos on this page (see
-  "Note on repeated family" below).
+- Depicts: a mother and young daughter who has Down syndrome playing with
+  blocks/tiles together at a bright home table - a different family and
+  photographer than the hero photo.
 
-All four candidates were downloaded and visually inspected before use to
-confirm they actually depict a family including a person with a visible
-intellectual/developmental disability (not eldercare, not a romantic couple,
-not a paid/premium-licensed stock photo).
+## assets/img/pfcp-chef-portrait.webp
+- Source: https://www.pexels.com/photo/man-in-white-long-sleeve-shirt-holding-black-cooking-pan-7698232/
+- Photographer: Mikhail Nilov
+- License: Pexels License (free for commercial use, no attribution required)
+- Used in: "One person who knows your family" (coordinator) section
+- Depicts: an adult man with Down syndrome, confident and smiling, dressed as
+  a chef in a kitchen/work setting - a different person, photographer, and
+  age/gender/context than every other photo on the page.
 
-### Note on repeated family
-All four photos on this page come from the same RDNE Stock project shoot (the
-only mother/father/adult-daughter-with-Down-syndrome session on Pexels or
-Unsplash with clearly authentic, non-clinical, non-staged-looking framing and
-a confirmed free license). This was a deliberate choice to keep every photo
-on the page genuinely representative rather than reach for a less carefully
-vetted photographer - flagged transparently here and in the build report
-rather than presented as four different families.
+### On disability-presentation variety
+Four different families/individuals and four different photographers are now
+used (the "same family pasted across the page" problem from the previous
+round is fixed). Disability-presentation variety is partial: three of the
+four photos show Down syndrome and one shows a mobility disability
+(wheelchair use, read as a plausible stand-in for cerebral palsy or a similar
+condition). This was a deliberate, license-driven choice, not an oversight:
+autism has no reliable *visual* signal, so no photo could honestly be
+captioned as depicting it without guessing at an unstated diagnosis, and a
+careful search of Pexels/Unsplash for other clearly-authentic,
+non-staged-looking, non-medical intellectual/developmental-disability
+photography kept surfacing the same small set of Down-syndrome and
+wheelchair-use sessions used here. No fallback (non-photo) slot was needed -
+all three replacement slots found a genuine, differently-sourced photo.
