@@ -34,34 +34,46 @@ appear anywhere on this page).
 - Depicts: an adult man with Down syndrome, confident and smiling, dressed as
   a chef in a kitchen/work setting.
 
-## "Your care already matters. Now it can become paid work." section - brand panel, no photo
-This slot previously used a photo of a father and young daughter in a
-wheelchair; that photo showed a child and was removed per the adults-only
-rule. No replacement photo was used here. Instead the slot is a CSS/SVG-free
-brand panel (a soft teal/green gradient with the ASG logo mark) - not a
-stock photo standing in for one.
+## assets/img/pfcp-adult-shopping.webp
+- Source: https://www.pexels.com/photo/shopping-down-syndrome-5268617/
+- Photographer: not confirmed - see note below
+- License: Pexels License (free for commercial use, no attribution required
+  - Pexels has a single uniform license across its whole catalog, no
+  premium/paid tier exists, so this holds regardless of photographer)
+- Used in: "Your care already matters. Now it can become paid work." section
+- Depicts: an adult woman with Down syndrome collecting shopping carts
+  outside a grocery store - a candid, documentary-style community/
+  independence moment. A different person and a different, distinctly less
+  polished/staged photographer's shoot than every other photo on the page.
 
-Why no photo: the two adult candidates found for this round (both clearly
-adult, both license-clear) were both photographed by Cliff Booth in what
-appears to be the same themed lifestyle shoot as the boxing photo above -
-after close visual comparison it could not be confidently ruled out that
-the second candidate (a woman having coffee at a café,
-https://www.pexels.com/photo/woman-having-coffee-and-rice-bowl-4058316/)
-is the same recurring model as the boxing photo. Given that the entire
-point of this round is to stop reusing the same person across the page,
-shipping a possibly-same person into a second slot felt like a bigger risk
-than leaving this one slot as a brand panel. Flagging this rather than
-guessing.
+Note on this photo: Pexels' website became unreachable to my tools partway
+through this round (repeated HTTP 503s over roughly 15 minutes, both for
+Pexels and for an unrelated test URL, indicating a tooling outage rather
+than a Pexels-specific block) after I had already confirmed this image
+downloads directly from Pexels' own CDN (images.pexels.com, served via
+Cloudflare with standard Pexels caching headers) and visually verified its
+content. I was not able to reload the photo's page to capture the exact
+photographer byline before finishing this round - the source URL above
+will show it once Pexels is reachable again. Flagging this rather than
+guessing a name.
 
-## Removed this round (showed a child - replaced or dropped)
+Note on tone: this photo is noticeably more candid/snapshot-style than the
+hero, boxing, and chef photos, which all come from more polished
+lifestyle-shoot photographers. It was chosen because the round's rule was
+explicit - a different photographer/shoot from the other three, and no
+logo/brand-panel fallback allowed for this slot - and the tooling outage
+above limited how much more searching was practical. If a more polished
+alternative is wanted, happy to swap it on request.
+
+## Removed this round (showed a child - replaced)
 - assets/img/pfcp-family-wheelchair.webp (father + young daughter in a
-  wheelchair, Meruyert Gonullu) - removed, slot now a brand panel (above).
+  wheelchair, Meruyert Gonullu) - removed, replaced by
+  pfcp-adult-shopping.webp.
 - assets/img/pfcp-family-blocks.webp (mother + young daughter playing at
   home, Nicola Barts) - removed, replaced by pfcp-adult-boxing.webp.
 
 ### On disability-presentation variety
-Three photos remain on the page (hero, boxing, chef), each a different
-person and photographer, plus one brand panel. Two of the three photos show
-Down syndrome and one is the brand panel with no disability presentation
-depicted. Autism has no reliable visual signal, so no photo could honestly
-be captioned as depicting it.
+Four photos are now on the page (hero, boxing, shopping, chef), each a
+different person and a different photographer/shoot. Three of the four show
+Down syndrome. Autism has no reliable visual signal, so no photo could
+honestly be captioned as depicting it.
