@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <title>Contact ASG Home Care | NJ Home Care Agency</title>
 <meta name="description" content="Contact ASG Home Care. Call, email, or send a message - a real person from our team picks up.">
 <link rel="canonical" href="https://www.asghomecare.com/contact/">
@@ -14,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JS8RNTLKC"></script>
@@ -26,43 +30,68 @@
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
       <img src="/assets/img/logo.png" alt="ASG Home Care logo">
+      <span class="logo-text">ASG Home Care</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="/">Home</a>
-      <a href="/family-caregivers/" class="active-accent">Get Paid to Care for Family</a>
+      <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
       <a href="/find-a-dsp/">Find a DSP</a>
       <a href="/become-a-dsp/">Become a DSP</a>
       <a href="/about/">About</a>
-      <a href="/contact/" class="active-accent">Contact</a>
+      <a href="/contact/">Contact</a>
     </nav>
     <a href="tel:+17329934163" class="phone-pill">📞 (732) 993-4163</a>
   </div>
 </header>
 
-<!-- SECTION 1 - HERO -->
-<section class="hero">
-  <div class="wrap hero-inner single-col">
+<!-- SECTION 1 - HERO with inline quick-contacts card (2-col, distinct
+     from every other hero on the site) -->
+<section class="hero reveal" id="main">
+  <div class="wrap-wide hero-inner">
     <div>
-      <span class="pill">CONTACT</span>
-      <h1>Contact ASG Home Care</h1>
-      <p class="hero-body">Questions about getting paid to care for a family member? Need a DSP? Just want to understand how DDD (New Jersey's Division of Developmental Disabilities) works? Call, email, or send the form - a real person from our team picks up.</p>
+      <span class="eyebrow-lg">Contact</span>
+      <h1 class="display-1">Contact ASG Home Care</h1>
+      <p class="hero-body" style="margin: 20px 0 0;">Questions about getting paid to care for a family member? Need a DSP? Just want to understand how DDD (New Jersey's Division of Developmental Disabilities) works? Call, email, or send the form - a real person from our team picks up.</p>
+    </div>
+    <div class="card quick-contacts-card">
+      <h3>Quick Contacts</h3>
+      <div class="row"><span class="label">Address:</span><span>1451 NJ-88 Suite 2, Brick, NJ 08724</span></div>
+      <div class="row"><span class="label">Phone:</span><span>(732) 993-4163</span></div>
+      <div class="row"><span class="label">Email:</span><span>info@asghomecare.com</span></div>
+      <div class="row"><span class="label">Hours:</span><span>Mon-Fri 9:00 am - 5:00 pm</span></div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2 - CONTACT FORM -->
-<section class="bg-white">
+<!-- SECTION 2 - CROSS-LINK CALLOUTS (stacked banners, distinct from the
+     old side-by-side path-link-cards) -->
+<section class="bg-light reveal">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:16px;">
+    <div class="callout-banner">
+      <p>Want to get paid to care for a family member?</p>
+      <a href="/family-caregivers/" class="callout-link">Start here →</a>
+    </div>
+    <div class="callout-banner">
+      <p>Need a DSP for your loved one?</p>
+      <a href="/find-a-dsp/" class="callout-link">Start here →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 - CONTACT FORM (full-width prominent) -->
+<section class="bg-white reveal">
   <div class="wrap">
-    <form class="form-card" action="https://formspree.io/f/mvkodreg" method="POST">
+    <form class="form-card" action="https://formspree.io/f/mvkodreg" method="POST" style="max-width: 720px;">
       <h3>Send us a message.</h3>
       <p class="form-sub">A real person reads every message.</p>
       <input type="hidden" name="_subject" value="Contact form - asghomecare.com">
@@ -102,41 +131,13 @@
   </div>
 </section>
 
-<!-- SECTION 3 - QUICK CONTACTS -->
-<section class="bg-light">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">Quick contacts</h2>
-    <div class="two-col-cards">
-      <div class="card">
-        <h3>Reach us:</h3>
-        <p>1451 NJ-88 Suite 2, Brick, NJ 08724<br>(732) 993-4163<br>info@asghomecare.com</p>
-      </div>
-      <div class="card">
-        <h3>Hours:</h3>
-        <p>Monday-Friday, 9:00 am - 5:00 pm.<br>Urgent issues for current families and DSPs: we answer 24/7.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 4 - TWO PATH CARDS -->
-<section class="bg-white">
-  <div class="wrap">
-    <div class="path-link-cards">
-      <div class="card">
-        <p>Want to get paid to care for a family member? <a href="/family-caregivers/" class="start-link">Start here</a></p>
-      </div>
-      <div class="card">
-        <p>Need a DSP for your loved one? <a href="/find-a-dsp/" class="start-link">Start here</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 5 - FOOTER -->
+<!-- SECTION 4 - FOOTER -->
 <footer class="site-footer">
   <div class="footer-row">
-    <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+    <div class="footer-logo-link">
+      <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+      <span class="footer-logo-text">ASG Home Care</span>
+    </div>
     <div class="footer-contact">1451 NJ-88 Suite 2, Brick, NJ 08724 · (732) 993-4163 · info@asghomecare.com</div>
     <a href="/faq/" class="faq-link">FAQ</a>
   </div>
@@ -144,5 +145,7 @@
 </footer>
 
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/analytics.js"></script>
+<script src="/assets/js/reveal.js"></script>
 </body>
 </html>

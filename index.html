@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <meta name="google-site-verification" content="07YZZgnmie80rOerv45Aiy58286Jx2N-nUVbA3XzDqk" />
 <title>ASG Home Care | Get Paid to Care for the Person You Love | New Jersey DDD Services</title>
 <meta name="description" content="Get paid to care for the person you love, or find a trusted, pre-screened DSP. ASG Home Care serves all 21 New Jersey counties.">
@@ -15,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script type="application/ld+json">
 {
@@ -42,17 +46,19 @@
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
       <img src="/assets/img/logo.png" alt="ASG Home Care logo">
+      <span class="logo-text">ASG Home Care</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
-      <a href="/" class="active-accent">Home</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="/">Home</a>
       <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
       <a href="/find-a-dsp/">Find a DSP</a>
@@ -64,124 +70,110 @@
   </div>
 </header>
 
-<!-- SECTION 1 - HERO -->
-<section class="hero">
-  <div class="wrap hero-inner">
+<!-- SECTION 1 - HERO with inline proof row (no separate stats-bar section) -->
+<section class="hero reveal" id="main">
+  <div class="wrap-wide hero-inner">
     <div>
-      <span class="pill">DDD-APPROVED AGENCY · NEW JERSEY</span>
-      <h1>Get paid to care for the person you love.</h1>
-      <p class="hero-body">If your family member qualifies for New Jersey's DDD program, you can become their paid DSP - we handle the paperwork, training, and payroll. Or we can match your loved one with a trusted, pre-screened DSP (a trained professional who supports your loved one one-on-one).</p>
+      <span class="eyebrow-lg">DDD-approved agency · New Jersey</span>
+      <h1 class="display-1">Get paid to care for the person you love.</h1>
+      <p class="hero-body" style="margin: 20px 0 28px;">If your family member qualifies for New Jersey's DDD program, you can become their paid DSP - we handle the paperwork, training, and payroll. Or we can match your loved one with a trusted, pre-screened DSP: a trained professional who supports them one-on-one.</p>
       <div class="btn-row">
         <a href="/family-caregivers/" class="btn btn-primary">Get Started</a>
         <a href="/find-a-dsp/" class="btn btn-secondary">Find a DSP</a>
       </div>
-      <p class="hero-line-small">Serving all 21 New Jersey counties. No cost to your family, ever.</p>
     </div>
-    <div class="hero-photo">
-      <img src="/assets/img/hero-home.jpg" alt="Mother and daughter cooking together at home">
+    <div class="img-frame ambient-zoom" style="--ar:4/3;--ar-m:4/3;--fx:50% 35%;">
+      <img src="/assets/img/hero-home.jpg" alt="Mother and daughter cooking together at home" loading="eager">
+    </div>
+  </div>
+  <div class="wrap-wide" style="margin-top: var(--space-6);">
+    <div class="proof-row">
+      <div class="proof-item">
+        <div class="proof-number">21</div>
+        <div class="proof-label">New Jersey counties served</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">2 paths</div>
+        <div class="proof-label">become a paid family DSP, or get matched with one</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">1 call</div>
+        <div class="proof-label">to get your questions answered by a real person</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2 - TWO PATH CARDS -->
-<div class="wrap">
-  <div class="path-cards">
-    <div class="card card-emphasis">
-      <h3>I'm a family member</h3>
-      <p>You're already doing the caring. You may be able to get paid for it.</p>
-      <a href="/family-caregivers/" class="btn btn-primary">Get Paid to Care for Your Loved One</a>
-    </div>
-    <div class="card card-emphasis blue-top">
-      <h3>I need a caregiver</h3>
-      <p>We will match your loved one with a trained, pre-screened DSP who fits your family.</p>
-      <a href="/find-a-dsp/" class="btn btn-secondary">Find a DSP</a>
-    </div>
-  </div>
-</div>
-
-<!-- SECTION 3 - NAVY STATS BAR -->
-<section class="stats-bar" style="padding-top: 116px;">
-  <div class="wrap stats-inner">
-    <div>
-      <div class="stat-number">21 counties</div>
-      <div class="stat-label">serving all of New Jersey</div>
-    </div>
-    <div>
-      <div class="stat-number">Pre-screened DSPs</div>
-      <div class="stat-label">across all 21 counties</div>
-    </div>
-    <div>
-      <div class="stat-number">Urgent support</div>
-      <div class="stat-label">24/7 for current families and DSPs</div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 4 - ALREADY DOING THIS WORK -->
-<section class="bg-white">
-  <div class="wrap split-section">
-    <div>
-      <h2 class="section-heading">You are probably already doing this work for free.</h2>
-      <p class="section-intro-body" style="margin-bottom: 28px;">Meals, routines, medications, appointments - that's real work, and it can be paid. We help parents, siblings, and relatives become paid DSPs for their own family members. And we stay involved: training, scheduling, and a real person to call.</p>
-      <a href="/family-caregivers/" class="btn btn-primary">How It Works</a>
-    </div>
-    <div>
-      <img src="/assets/img/section4-home.jpg" alt="DSP and young man learning together at a kitchen table">
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 5 - CARE THAT STARTS WITH FAMILY -->
-<section class="bg-light">
+<!-- SECTION 2 - ALREADY DOING THIS WORK (editorial row, image left) -->
+<section class="bg-light reveal">
   <div class="wrap">
-    <div class="section-intro" style="margin-bottom: 44px;">
-      <h2 class="section-heading">Care that starts with family - and stays there.</h2>
-      <p class="section-intro-body" style="margin-bottom: 24px;">We help relatives become paid DSPs, and we match individuals with Direct Support Professionals who treat them like family. One mission: consistent, personal care at home, from the people who know them best.</p>
-      <a href="/contact/" class="btn btn-secondary">Speak With a Specialist</a>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">🤝</div>
-        <h3>Trust</h3>
-        <p>Your family knows who is coming through the door, and we do what we say we will.</p>
+    <div class="editorial-row image-left">
+      <div class="img-frame" style="--ar:4/3;--ar-m:4/3;--fx:50% 30%;">
+        <img src="/assets/img/section4-home.jpg" alt="A young man going through paperwork with his mother at the kitchen table" loading="lazy">
       </div>
-      <div class="card">
-        <div class="card-icon">⚡</div>
-        <h3>Responsiveness</h3>
-        <p>Calls and emails answered fast, every time.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📝</div>
-        <h3>DDD expertise</h3>
-        <p>We work inside New Jersey's DDD system every day and handle its paperwork for you.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🏠</div>
-        <h3>Local roots</h3>
-        <p>We are New Jersey through and through, serving all 21 counties.</p>
+      <div>
+        <span class="eyebrow-lg">Family caregivers</span>
+        <h2 class="display-2">You are probably already doing this work.</h2>
+        <p class="section-intro-body" style="margin: 18px 0 28px;">Meals, routines, medications, appointments - that's real work, and it can be paid. We help parents, siblings, and relatives become paid DSPs for their own family members, and we stay involved: training, scheduling, and a real person to call.</p>
+        <a href="/family-caregivers/" class="btn btn-primary">How It Works</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 6 - HOW WE SUPPORT YOUR FAMILY -->
-<section class="bg-white">
+<!-- SECTION 4 - HOW ASG WORKS (process rail, new section type) -->
+<section class="bg-white reveal">
   <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">How we support your family</h2>
-    <div class="card-grid">
-      <div class="card">
+    <div class="section-intro text-center" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow-lg" style="justify-content:center;">How it works</span>
+      <h2 class="display-2">Four steps, one point of contact.</h2>
+    </div>
+    <div class="process-rail" style="margin-top: var(--space-5);">
+      <div>
+        <div class="step-circle">1</div>
+        <h3>Tell us about your family</h3>
+        <p>A short call or form - either works.</p>
+      </div>
+      <div>
+        <div class="step-circle">2</div>
+        <h3>We explain your options</h3>
+        <p>Become a paid family DSP, or get matched with one - we help you decide.</p>
+      </div>
+      <div>
+        <div class="step-circle">3</div>
+        <h3>We handle the paperwork</h3>
+        <p>DDD enrollment, training, and payroll - we do the heavy lifting.</p>
+      </div>
+      <div>
+        <div class="step-circle">4</div>
+        <h3>We stay involved</h3>
+        <p>Ongoing check-ins and one person who knows your family.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 - SERVICES TEASER (service-grid, distinct from old card-grid look) -->
+<section class="bg-light reveal">
+  <div class="wrap">
+    <div class="section-intro">
+      <span class="eyebrow-lg">What we offer</span>
+      <h2 class="display-2">How we support your family</h2>
+    </div>
+    <div class="service-grid">
+      <div class="service-item">
         <h3>Individual Supports</h3>
         <p>One-on-one help with daily life, skills, and independence.</p>
       </div>
-      <div class="card">
+      <div class="service-item">
         <h3>Community-Based Supports</h3>
         <p>Getting out: errands, activities, appointments, social life.</p>
       </div>
-      <div class="card">
+      <div class="service-item">
         <h3>Behavioral Supports</h3>
         <p>Specialist-built plans that make home life calmer and safer.</p>
       </div>
-      <div class="card">
+      <div class="service-item">
         <h3>In-Home Respite</h3>
         <p>A real break for family caregivers, with someone you trust stepping in.</p>
       </div>
@@ -192,60 +184,48 @@
   </div>
 </section>
 
-<!-- SECTION 7 - TESTIMONIALS -->
-<section class="bg-light">
+<!-- SECTION 6 - WHICH PATH FITS YOU (two-path cards, moved lower than old skeleton) -->
+<section class="bg-white reveal">
   <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">Trusted by families, DSPs, and support coordinators across New Jersey.</h2>
-    <div class="testimonial-grid">
-      <div class="card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"Our DSP learned my son's routines, his favorite songs, what makes him laugh. He asks for her by name every morning. ASG got the match exactly right."</p>
-        <div class="testimonial-name">Rachel</div>
-        <div class="testimonial-role">mom of a son with autism · Ocean County</div>
+    <div class="section-intro text-center" style="margin-left:auto;margin-right:auto;">
+      <h2 class="display-2">Which path fits your family?</h2>
+    </div>
+    <div class="path-cards" style="margin-top: var(--space-5);">
+      <div class="card card-emphasis">
+        <h3>I'm a family member</h3>
+        <p>You're already doing the caring. You may be able to get paid for it.</p>
+        <a href="/family-caregivers/" class="btn btn-primary">Get Paid to Care for Your Loved One</a>
       </div>
-      <div class="card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"ASG is the first call I make for new families. They pick up the phone, they move the paperwork, and they treat every family like their own."</p>
-        <div class="testimonial-name">Kayla</div>
-        <div class="testimonial-role">support coordinator · Monmouth County</div>
-      </div>
-      <div class="card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"Getting paid to care for my brother changed our whole family. ASG handled the enrollment, the training, all of it - and they check in on us all the time."</p>
-        <div class="testimonial-name">David</div>
-        <div class="testimonial-role">brother and paid DSP · Middlesex County</div>
+      <div class="card card-emphasis blue-top">
+        <h3>I need a caregiver</h3>
+        <p>We will match your loved one with a trained, pre-screened DSP who fits your family.</p>
+        <a href="/find-a-dsp/" class="btn btn-secondary">Find a DSP</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 8 - TALK TO A REAL PERSON -->
-<section class="bg-white">
-  <div class="wrap contact-split">
-    <div>
-      <h2 class="section-heading" style="margin-bottom: 18px;">Talk to a real person today.</h2>
-      <p class="section-intro-body" style="margin-bottom: 28px;">Questions about DDD or getting started? Call us - a real person picks up.</p>
-      <a href="tel:+17329934163" class="btn btn-primary">Call (732) 993-4163</a>
-    </div>
-    <div class="card quick-contacts-card">
-      <h3>Quick Contacts</h3>
-      <div class="row"><span class="label">Address:</span><span>1451 NJ-88 Suite 2, Brick, NJ 08724</span></div>
-      <div class="row"><span class="label">Phone:</span><span>(732) 993-4163</span></div>
-      <div class="row"><span class="label">Email:</span><span>info@asghomecare.com</span></div>
-      <div class="row"><span class="label">Hours:</span><span>Mon-Fri 9:00 am - 5:00 pm (urgent issues: 24/7)</span></div>
+<!-- SECTION 7 - CTA BAND -->
+<section class="bg-light reveal">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 class="display-2">Talk to a real person today.</h2>
+      <p>Questions about DDD, eligibility, or getting started? Call us - a real person picks up.</p>
+      <div class="btn-row">
+        <a href="tel:+17329934163" class="btn btn-primary">Call (732) 993-4163</a>
+        <a href="/contact/" class="btn btn-secondary" style="background:transparent;color:var(--white);border-color:var(--white);">Contact Us</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 9 - CLOSING STRIP -->
-<div class="closing-strip">
-  <p>Empowering families. Supporting individuals.</p>
-</div>
-
-<!-- SECTION 10 - FOOTER -->
+<!-- SECTION 8 - FOOTER -->
 <footer class="site-footer">
   <div class="footer-row">
-    <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+    <div class="footer-logo-link">
+      <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+      <span class="footer-logo-text">ASG Home Care</span>
+    </div>
     <div class="footer-contact">1451 NJ-88 Suite 2, Brick, NJ 08724 · (732) 993-4163 · info@asghomecare.com</div>
     <a href="/faq/" class="faq-link">FAQ</a>
   </div>
@@ -253,5 +233,7 @@
 </footer>
 
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/analytics.js"></script>
+<script src="/assets/js/reveal.js"></script>
 </body>
 </html>

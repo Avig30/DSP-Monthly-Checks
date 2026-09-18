@@ -13,9 +13,54 @@
   --green: #9AC57D;
   --green-tint: #EEF5E7;
   --white: #FFFFFF;
+
+  /* --- Rebuild design system (additive; used only by new component
+     classes below and on rebuilt routes — nothing existing is
+     redefined, so unmigrated pages and the protected /family-caregivers/
+     page render exactly as before). --- */
+  --font-display: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+
+  --shadow-sm: 0 10px 28px rgba(24,61,87,.08);
+  --shadow-md: 0 20px 48px rgba(24,61,87,.14);
+  --shadow-lg: 0 32px 64px rgba(24,61,87,.18);
+
+  --wrap-wide: 1320px;
+  --wrap-narrow: 760px;
+
+  --navy-deep: #10283B;
+  --coral: #E07856;
+  --cream: #FBF7EF;
 }
 
 * { box-sizing: border-box; }
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm, 10px);
+  font-weight: 700;
+  z-index: 1000;
+  transition: top .15s ease;
+}
+.skip-link:focus { top: 12px; }
 
 html { scroll-behavior: smooth; }
 
@@ -153,13 +198,24 @@ header.site-header {
 .logo-link {
   display: flex;
   align-items: center;
+  gap: 10px;
   flex-shrink: 0;
 }
 
 .logo-link img {
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
   object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--navy);
+  white-space: nowrap;
+  line-height: 1;
 }
 
 nav.main-nav {
@@ -498,12 +554,28 @@ footer.site-footer {
   margin: 0 auto;
 }
 
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .footer-logo {
-  height: 44px;
-  width: 44px;
+  height: 38px;
+  width: 38px;
   object-fit: contain;
   filter: brightness(0) invert(1);
   flex-shrink: 0;
+}
+
+.footer-logo-text {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--white);
+  white-space: nowrap;
+  line-height: 1;
 }
 
 footer.site-footer .footer-contact {
@@ -740,4 +812,508 @@ footer.site-footer .footer-copy {
   section {
     padding: 48px 0;
   }
+}
+
+/* ===================================================================
+   REBUILD DESIGN SYSTEM
+   New, additively-named primitives for the site rebuild. Nothing above
+   this line is modified. Rebuilt routes opt in by using these classes;
+   pages not yet rebuilt (and the protected /family-caregivers/ page,
+   which never uses these classes) are visually unaffected.
+   =================================================================== */
+
+.wrap-wide { max-width: var(--wrap-wide); margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: var(--wrap-narrow); margin: 0 auto; padding: 0 24px; }
+
+/* Fluid display type (Lora) for rebuilt-route headings only.
+   Bare h1/h2/h3/h4 selectors are untouched. */
+.display-1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--navy);
+  font-size: clamp(36px, 4.6vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.display-2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--navy);
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.16;
+  margin: 0;
+}
+.display-3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--navy);
+  font-size: clamp(22px, 2.2vw, 27px);
+  line-height: 1.25;
+  margin: 0;
+}
+.eyebrow-lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-dark);
+  margin-bottom: var(--space-2);
+}
+.eyebrow-lg::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--teal);
+  display: inline-block;
+}
+
+/* Type specimen block (design-system evidence page) */
+.type-specimen-row { display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; margin-bottom: var(--space-3); }
+.type-specimen-row .weight-label { font-family: var(--font-body); font-size: 13px; color: var(--muted); width: 90px; flex-shrink: 0; }
+
+/* Responsive image frame with independent desktop/mobile focal control.
+   Usage: <div class="img-frame" style="--ar:4/3;--ar-m:1/1;--fx:50% 35%;--fx-m:50% 20%">
+     <img loading="lazy" alt="…" src="…"></div> */
+.img-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  aspect-ratio: var(--ar, 4/3);
+}
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--fx, 50% 50%);
+}
+@media (max-width: 900px) {
+  .img-frame { aspect-ratio: var(--ar-m, var(--ar, 4/3)); }
+  .img-frame img { object-position: var(--fx-m, var(--fx, 50% 50%)); }
+}
+.img-frame.frame-flush { border-radius: 0; box-shadow: none; }
+
+/* Editorial text + image row, either order, reusable across routes */
+.editorial-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+.editorial-row.image-right .img-frame { order: 2; }
+.editorial-row.image-left .img-frame { order: 0; }
+@media (max-width: 900px) {
+  .editorial-row { grid-template-columns: 1fr; gap: var(--space-4); }
+  .editorial-row .img-frame { order: -1 !important; }
+}
+
+/* Proof / stat row — flexible count of stats */
+.proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  justify-content: space-between;
+}
+.proof-item { flex: 1 1 160px; }
+.proof-number {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 40px);
+  color: var(--teal-dark);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.proof-label { font-size: 14.5px; color: var(--muted); }
+
+/* Large pull-quote band */
+.quote-band {
+  max-width: var(--wrap-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+.quote-band blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(22px, 2.6vw, 30px);
+  color: var(--navy);
+  line-height: 1.4;
+  margin: 0 0 var(--space-3);
+}
+.quote-band cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 14.5px;
+  color: var(--teal-dark);
+}
+.quote-band .quote-role { display: block; font-family: var(--font-body); font-weight: 500; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+
+/* Full-width CTA band */
+.cta-band {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  text-align: center;
+  color: var(--white);
+}
+.cta-band .display-2 { color: var(--white); }
+.cta-band p { color: #C8D6E0; font-size: 17px; max-width: 620px; margin: var(--space-2) auto var(--space-4); }
+.cta-band .btn-row { justify-content: center; }
+@media (max-width: 900px) {
+  .cta-band { padding: var(--space-5) var(--space-3); }
+}
+
+/* Process rail — connected numbered steps */
+.process-rail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  position: relative;
+}
+.process-rail::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: var(--card-border);
+  z-index: 0;
+}
+.process-rail .step-circle { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .process-rail { grid-template-columns: 1fr; gap: var(--space-4); }
+  .process-rail::before { display: none; }
+}
+
+/* Service item — icon/number + heading + body + link, for a service grid
+   with a genuinely different visual treatment than generic .card-grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+.service-item {
+  border-top: 3px solid var(--teal);
+  padding-top: var(--space-3);
+}
+.service-item h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.service-item p { color: var(--muted); font-size: 15.5px; margin-bottom: 14px; }
+.service-item a.service-link { color: var(--teal); font-weight: 800; font-size: 14.5px; }
+@media (max-width: 900px) {
+  .service-grid { grid-template-columns: 1fr; }
+}
+
+/* Accordion (details/summary), shared visual treatment for rebuilt routes */
+.accordion-item {
+  border-bottom: 1px solid var(--card-border);
+  padding: 20px 0;
+}
+.accordion-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 17px;
+}
+.accordion-item summary::-webkit-details-marker { display: none; }
+.accordion-item summary::after {
+  content: '+';
+  font-size: 22px;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+.accordion-item[open] summary::after { content: '\2212'; }
+.accordion-item .accordion-body { padding-top: 14px; color: var(--muted); font-size: 15.5px; line-height: 1.7; }
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-item[open] .accordion-body { animation: accordionIn .2s ease; }
+}
+@keyframes accordionIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Scroll-reveal (opt-in via .reveal + assets/js/reveal.js) */
+.reveal.pre-reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.revealed { opacity: 1; transform: none; }
+
+/* Visible keyboard focus everywhere new primitives are used */
+.service-link:focus-visible,
+.accordion-item summary:focus-visible,
+.btn:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--teal-dark);
+  outline-offset: 2px;
+}
+
+/* Ambient motion, always reduced-motion gated */
+@media (prefers-reduced-motion: no-preference) {
+  .ambient-zoom { animation: ambientZoom 26s ease-in-out infinite alternate; }
+}
+@keyframes ambientZoom { from { transform: scale(1); } to { transform: scale(1.05); } }
+
+@media (max-width: 900px) {
+  .proof-row { gap: var(--space-3); }
+  .service-grid,
+  .editorial-row { gap: var(--space-3); }
+}
+
+/* Service detail row — alternating stacked editorial blocks with a
+   decorative colored icon panel (no photo). Distinct from .service-grid. */
+.service-detail-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--card-border);
+}
+.service-detail-row:first-of-type { padding-top: 0; }
+.service-detail-row:last-of-type { border-bottom: none; }
+.service-detail-row.reverse { grid-template-columns: 1fr 280px; }
+.service-detail-row.reverse .service-panel { order: 2; }
+.service-panel {
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  color: var(--white);
+  padding: var(--space-3);
+}
+.service-panel.tone-teal { background: linear-gradient(150deg, var(--teal), var(--teal-dark)); }
+.service-panel.tone-blue { background: linear-gradient(150deg, var(--blue), var(--navy)); }
+.service-panel.tone-green { background: linear-gradient(150deg, var(--green), var(--teal)); }
+.service-panel.tone-navy { background: linear-gradient(150deg, var(--navy), var(--navy-deep)); }
+.service-panel .panel-glyph { font-size: 34px; display: block; margin-bottom: 10px; }
+.service-detail-row h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(22px, 2vw, 26px);
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.service-detail-row p { color: var(--muted); font-size: 16px; line-height: 1.7; }
+@media (max-width: 900px) {
+  .service-detail-row,
+  .service-detail-row.reverse {
+    grid-template-columns: 1fr;
+  }
+  .service-detail-row.reverse .service-panel { order: 0; }
+  .service-panel { max-width: 160px; aspect-ratio: 1; }
+}
+
+/* Typographic step list — large ghost numerals, no circles or rail.
+   A third distinct "steps" treatment (process-rail = horizontal circles,
+   timeline-alt = zigzag vertical, step-list = plain numbered stack). */
+.step-list { display: flex; flex-direction: column; }
+.step-list-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--card-border);
+  align-items: flex-start;
+}
+.step-list-item:last-child { border-bottom: none; }
+.step-list-number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--card-border);
+  line-height: 1;
+}
+.step-list-item h3 { font-size: 18px; color: var(--navy); margin-bottom: 6px; }
+.step-list-item p { color: var(--muted); font-size: 15px; }
+
+/* Form shell with a companion reassurance panel beside the form card */
+.form-shell-split {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+.form-shell-split .form-card { margin: 0; max-width: none; }
+.reassurance-list { display: flex; flex-direction: column; gap: var(--space-3); }
+@media (max-width: 900px) {
+  .form-shell-split { grid-template-columns: 1fr; }
+}
+
+/* Designed gradient hero — reusable across routes with different tone
+   variants so each still feels distinct (see --tone-a/--tone-b/--tone-c
+   overrides per hero-gradient-* class). */
+.hero-gradient {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  padding: var(--space-7) 0;
+  color: var(--white);
+}
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, var(--tone-a, var(--teal)) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, var(--tone-b, var(--blue)) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, var(--tone-c, var(--navy-deep)) 0%, transparent 60%),
+    linear-gradient(160deg, var(--navy), var(--navy-deep));
+  z-index: 0;
+}
+.hero-gradient .wrap,
+.hero-gradient .wrap-wide,
+.hero-gradient .wrap-narrow { position: relative; z-index: 1; }
+.hero-gradient .eyebrow-lg { color: var(--white); }
+.hero-gradient .eyebrow-lg::before { background: var(--white); }
+.hero-gradient .display-1 { color: var(--white); }
+.hero-gradient .hero-body { color: #D8E4EC; }
+.hero-gradient .leaf-accent {
+  position: absolute;
+  opacity: 0.5;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-gradient .leaf-accent { animation: leafDrift 10s ease-in-out infinite alternate; }
+}
+@keyframes leafDrift { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(-14px) rotate(6deg); } }
+
+/* Minimalist value list — plain square-bullet rows, no card or border,
+   distinct from card-grid/chip-cloud/service-grid used elsewhere */
+.value-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-5);
+}
+.value-list-item { padding-left: 26px; position: relative; }
+.value-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: var(--teal);
+  border-radius: 2px;
+}
+.value-list-item h3 { font-family: var(--font-display); font-weight: 600; font-size: 19px; color: var(--navy); margin-bottom: 6px; }
+.value-list-item p { color: var(--muted); font-size: 15px; }
+@media (max-width: 900px) {
+  .value-list { grid-template-columns: 1fr; }
+}
+
+/* Founder / pull-quote card with a side rule accent (distinct from the
+   centered .quote-band treatment) */
+.quote-card {
+  border-left: 4px solid var(--teal);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-light);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.quote-card blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(19px, 1.8vw, 22px);
+  color: var(--navy);
+  line-height: 1.55;
+  margin: 0 0 var(--space-3);
+}
+.quote-card cite { display: block; font-style: normal; font-weight: 800; color: var(--teal-dark); font-size: 14.5px; }
+.quote-card .quote-role { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+
+/* Benefit chip cloud — flexible wrapped pills, distinct from a card grid */
+.chip-cloud { display: flex; flex-wrap: wrap; gap: 14px; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.chip .chip-glyph { color: var(--teal); font-size: 16px; }
+
+/* Inline highlight callout banner (e.g. cross-link to another route) */
+.callout-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  background: var(--green-tint);
+  border: 1px solid #DCEAC9;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+.callout-banner p { color: var(--body-text); font-size: 16px; font-weight: 600; min-width: 0; }
+.callout-banner a.callout-link { color: var(--teal-dark); font-weight: 800; }
+@media (max-width: 900px) {
+  .callout-banner { flex-direction: column; align-items: flex-start; }
+}
+
+/* Alternating vertical timeline (distinct from .process-rail's
+   horizontal connected-circle layout) */
+.timeline-alt { position: relative; }
+.timeline-alt::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--card-border);
+  transform: translateX(-1px);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.timeline-item .step-circle { margin: 0 auto; z-index: 1; }
+.timeline-item .timeline-text { }
+.timeline-item.side-left .timeline-text { grid-column: 1; text-align: right; }
+.timeline-item.side-left .timeline-spacer { grid-column: 3; }
+.timeline-item.side-right .timeline-text { grid-column: 3; text-align: left; }
+.timeline-item.side-right .timeline-spacer { grid-column: 1; }
+.timeline-item h3 { font-size: 18px; margin-bottom: 6px; color: var(--navy); }
+.timeline-item p { color: var(--muted); font-size: 15px; }
+@media (max-width: 900px) {
+  .timeline-alt::before { left: 20px; }
+  .timeline-item,
+  .timeline-item.side-left,
+  .timeline-item.side-right {
+    grid-template-columns: 40px 1fr;
+    gap: var(--space-2);
+  }
+  .timeline-item .step-circle { margin: 0; }
+  .timeline-item.side-left .timeline-text,
+  .timeline-item.side-right .timeline-text {
+    grid-column: 2;
+    text-align: left;
+  }
+  .timeline-item .timeline-spacer { display: none; }
 }

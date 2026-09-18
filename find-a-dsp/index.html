@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <title>Find a Trusted DSP in New Jersey | ASG Home Care</title>
 <meta name="description" content="Find a trusted, pre-screened Direct Support Professional (DSP) for your loved one, matched across all 21 New Jersey counties.">
 <link rel="canonical" href="https://www.asghomecare.com/find-a-dsp/">
@@ -14,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JS8RNTLKC"></script>
@@ -26,20 +30,22 @@
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
       <img src="/assets/img/logo.png" alt="ASG Home Care logo">
+      <span class="logo-text">ASG Home Care</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="/">Home</a>
-      <a href="/family-caregivers/" class="active-accent">Get Paid to Care for Family</a>
+      <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
-      <a href="/find-a-dsp/" class="active-accent">Find a DSP</a>
+      <a href="/find-a-dsp/">Find a DSP</a>
       <a href="/become-a-dsp/">Become a DSP</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
@@ -48,145 +54,192 @@
   </div>
 </header>
 
-<!-- SECTION 1 - HERO -->
-<section class="hero">
-  <div class="wrap hero-inner single-col">
-    <div>
-      <span class="pill">FIND A DSP</span>
-      <h1>Find a DSP your family can actually trust.</h1>
-      <p class="hero-body">A DSP (Direct Support Professional) is a trained professional who works one-on-one with your loved one - at home and out in the community. We pre-screen every DSP, match on personality and schedule, and stay involved after the match.</p>
-      <div class="btn-row">
-        <a href="#request-form" class="btn btn-primary">Tell Us What You Need</a>
+<!-- SECTION 1 - DESIGNED GRADIENT HERO (no photo; see IMAGE-SOURCES.md
+     for why - avoids reusing the protected page's boxing photo) -->
+<section class="hero-gradient reveal" id="main" style="--tone-a: var(--teal); --tone-b: var(--blue); --tone-c: var(--green);">
+  <span class="leaf-accent" style="top: 12%; left: 6%; font-size: 64px;">🍃</span>
+  <span class="leaf-accent" style="bottom: 10%; right: 8%; font-size: 48px;">🍃</span>
+  <div class="wrap-narrow" style="max-width: 760px;">
+    <span class="eyebrow-lg">Find a DSP</span>
+    <h1 class="display-1">Find a DSP your family can actually trust.</h1>
+    <p class="hero-body" style="margin: 20px 0 28px;">A DSP (Direct Support Professional) is a trained professional who works one-on-one with your loved one - at home and out in the community. We pre-screen every DSP, match on personality and schedule, and stay involved after the match.</p>
+    <div class="btn-row">
+      <a href="#request-form" class="btn btn-primary">Tell Us What You Need</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 - EVERY MATCH STARTS WITH YOUR LOVED ONE (editorial row, photo E) -->
+<section class="bg-white reveal">
+  <div class="wrap">
+    <div class="editorial-row image-right">
+      <div>
+        <span class="eyebrow-lg">Community &amp; independence</span>
+        <h2 class="display-2">Every match starts with your loved one.</h2>
+        <p class="section-intro-body" style="margin: 18px 0 0;">We start with your loved one: their routines, their communication style, what a good day looks like, and how they like to be supported. Then we match from our network of pre-screened DSPs across all 21 NJ counties - and we keep checking in after the match. You always have a team behind you.</p>
+      </div>
+      <div class="img-frame" style="--ar:1/1;--ar-m:4/5;--fx:48% 80%;--fx-m:48% 68%;">
+        <img src="/assets/img/find-dsp-lake-outing.webp" alt="An adult man with Down syndrome on a boat on a lake" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2 - EVERY MATCH -->
-<section class="bg-white">
-  <div class="wrap">
-    <div class="section-intro">
-      <h2 class="section-heading">Every match starts with your loved one.</h2>
-      <p class="section-intro-body" style="margin-top: 18px;">We start with your loved one: their routines, their communication style, what a good day looks like, and how they like to be supported. Then we match from our network of pre-screened DSPs across all 21 NJ counties - and we keep checking in after the match. You always have a team behind you.</p>
+<!-- SECTION 3 - WHAT OUR DSPS CAN HELP WITH (single bordered panel, not a card grid) -->
+<section class="bg-light reveal">
+  <div class="wrap-narrow">
+    <div class="section-intro text-center" style="margin-left:auto;margin-right:auto;">
+      <h2 class="display-2">What our DSPs can help with</h2>
     </div>
-  </div>
-</section>
-
-<!-- SECTION 3 - WHAT OUR DSPS CAN HELP WITH -->
-<section class="bg-light">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">What our DSPs can help with</h2>
-    <div class="card-grid cols-2">
-      <div class="card check-item">
-        <span class="check-glyph">✓</span>
-        <p><strong>Daily routines</strong> - meals, hygiene, medications, schedules</p>
-      </div>
-      <div class="card check-item">
-        <span class="check-glyph">✓</span>
-        <p><strong>Life skills</strong> - cooking, money, transportation, self-advocacy</p>
-      </div>
-      <div class="card check-item">
-        <span class="check-glyph">✓</span>
-        <p><strong>Community time</strong> - errands, activities, appointments, social life</p>
-      </div>
-      <div class="card check-item">
-        <span class="check-glyph">✓</span>
-        <p><strong>Respite</strong> - a real break for you, with someone you trust</p>
+    <div class="card" style="margin-top: var(--space-5); padding: var(--space-5);">
+      <div class="card-grid cols-2" style="gap: 28px;">
+        <div class="check-item">
+          <span class="check-glyph">✓</span>
+          <p><strong>Daily routines</strong> - meals, hygiene, medications, schedules</p>
+        </div>
+        <div class="check-item">
+          <span class="check-glyph">✓</span>
+          <p><strong>Life skills</strong> - cooking, money, transportation, self-advocacy</p>
+        </div>
+        <div class="check-item">
+          <span class="check-glyph">✓</span>
+          <p><strong>Community time</strong> - errands, activities, appointments, social life</p>
+        </div>
+        <div class="check-item">
+          <span class="check-glyph">✓</span>
+          <p><strong>Respite</strong> - a real break for you, with someone you trust</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 4 - HOW MATCHING WORKS -->
-<section class="bg-white">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">How matching works</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="step-circle">1</div>
-        <h3>Tell us about your loved one</h3>
-        <p>The short form below or a quick call - either works.</p>
+<!-- SECTION 4 - HOW MATCHING WORKS (typographic step-list) -->
+<section class="bg-white reveal">
+  <div class="wrap-narrow">
+    <h2 class="display-2" style="margin-bottom: var(--space-4);">How matching works</h2>
+    <div class="step-list">
+      <div class="step-list-item">
+        <div class="step-list-number">01</div>
+        <div>
+          <h3>Tell us about your loved one</h3>
+          <p>The short form below or a quick call - either works.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="step-circle">2</div>
-        <h3>We confirm eligibility and hours</h3>
-        <p>We confirm DDD eligibility and hours with you and your support coordinator. Not approved yet? We will tell you exactly what to do.</p>
+      <div class="step-list-item">
+        <div class="step-list-number">02</div>
+        <div>
+          <h3>We confirm eligibility and hours</h3>
+          <p>We confirm DDD eligibility and hours with you and your support coordinator. Not approved yet? We will tell you exactly what to do.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="step-circle">3</div>
-        <h3>Meet your match first</h3>
-        <p>We propose a match and you meet the DSP before anything starts.</p>
+      <div class="step-list-item">
+        <div class="step-list-number">03</div>
+        <div>
+          <h3>Meet your match first</h3>
+          <p>We propose a match and you meet the DSP before anything starts.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="step-circle">4</div>
-        <h3>We keep checking in</h3>
-        <p>Services begin and we stay involved. Questions or changes? One call and we make it right.</p>
+      <div class="step-list-item">
+        <div class="step-list-number">04</div>
+        <div>
+          <h3>We keep checking in</h3>
+          <p>Services begin and we stay involved. Questions or changes? One call and we make it right.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 5 - REQUEST FORM -->
-<section class="bg-light" id="request-form">
+<!-- SECTION 5 - REQUEST FORM (form-shell-split: form + reassurance panel) -->
+<section class="bg-light reveal" id="request-form">
   <div class="wrap">
-    <form class="form-card" action="https://formspree.io/f/mvkodreg" method="POST">
-      <h3>Tell us about your loved one.</h3>
-      <p class="form-sub">Two minutes. We take it from there.</p>
-      <input type="hidden" name="_subject" value="Find a DSP request - asghomecare.com">
-      <input type="text" name="_gotcha" style="display:none">
-      <div class="form-grid">
-        <div class="form-field">
-          <label for="fd-name">Your name</label>
-          <input type="text" id="fd-name" name="Your name" placeholder="Full name" required>
-        </div>
-        <div class="form-field">
-          <label for="fd-relationship">Relationship</label>
-          <input type="text" id="fd-relationship" name="Relationship" placeholder="e.g. mother, brother, guardian" required>
-        </div>
-        <div class="form-field">
-          <label for="fd-age">Individual's age</label>
-          <input type="text" id="fd-age" name="Individual's age" placeholder="Age" required>
-        </div>
-        <div class="form-field">
-          <label for="fd-county">County</label>
-          <input type="text" id="fd-county" name="County" placeholder="NJ county" required>
-        </div>
-        <div class="form-field">
-          <label for="fd-ddd">DDD status</label>
-          <select id="fd-ddd" name="DDD status" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="Yes - approved">Yes - approved</option>
-            <option value="No">No</option>
-            <option value="Not sure">Not sure</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="fd-schedule">Preferred schedule</label>
-          <input type="text" id="fd-schedule" name="Preferred schedule" placeholder="e.g. weekdays after 3pm">
-        </div>
-        <div class="form-field">
-          <label for="fd-phone">Phone</label>
-          <input type="tel" id="fd-phone" name="Phone" placeholder="(732) 555-0123" required>
-        </div>
-        <div class="form-field">
-          <label for="fd-email">Email</label>
-          <input type="email" id="fd-email" name="email" placeholder="you@email.com" required>
-        </div>
-        <div class="form-field full-width">
-          <label for="fd-help">What kind of help do you need?</label>
-          <textarea id="fd-help" name="What kind of help do you need" placeholder="Daily routines, community time, respite - tell us in your own words."></textarea>
+    <div class="form-shell-split">
+      <div class="form-card">
+        <h3>Tell us about your loved one.</h3>
+        <p class="form-sub">Two minutes. We take it from there.</p>
+        <form action="https://formspree.io/f/mvkodreg" method="POST">
+          <input type="hidden" name="_subject" value="Find a DSP request - asghomecare.com">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="fd-name">Your name</label>
+              <input type="text" id="fd-name" name="Your name" placeholder="Full name" required>
+            </div>
+            <div class="form-field">
+              <label for="fd-relationship">Relationship</label>
+              <input type="text" id="fd-relationship" name="Relationship" placeholder="e.g. mother, brother, guardian" required>
+            </div>
+            <div class="form-field">
+              <label for="fd-age">Individual's age</label>
+              <input type="text" id="fd-age" name="Individual's age" placeholder="Age" required>
+            </div>
+            <div class="form-field">
+              <label for="fd-county">County</label>
+              <input type="text" id="fd-county" name="County" placeholder="NJ county" required>
+            </div>
+            <div class="form-field">
+              <label for="fd-ddd">DDD status</label>
+              <select id="fd-ddd" name="DDD status" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="Yes - approved">Yes - approved</option>
+                <option value="No">No</option>
+                <option value="Not sure">Not sure</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="fd-schedule">Preferred schedule</label>
+              <input type="text" id="fd-schedule" name="Preferred schedule" placeholder="e.g. weekdays after 3pm">
+            </div>
+            <div class="form-field">
+              <label for="fd-phone">Phone</label>
+              <input type="tel" id="fd-phone" name="Phone" placeholder="(732) 555-0123" required>
+            </div>
+            <div class="form-field">
+              <label for="fd-email">Email</label>
+              <input type="email" id="fd-email" name="email" placeholder="you@email.com" required>
+            </div>
+            <div class="form-field full-width">
+              <label for="fd-help">What kind of help do you need?</label>
+              <textarea id="fd-help" name="What kind of help do you need" placeholder="Daily routines, community time, respite - tell us in your own words."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Request a Match</button>
+          <p class="form-phone-line">Or call <a href="tel:+17329934163">(732) 993-4163</a> - a real person picks up.</p>
+        </form>
+      </div>
+      <div>
+        <h3 class="display-3" style="margin-bottom: var(--space-3);">Why families trust ASG</h3>
+        <div class="reassurance-list">
+          <div class="check-item">
+            <span class="check-glyph">✓</span>
+            <p><strong>Pre-screened DSPs</strong> across all 21 NJ counties</p>
+          </div>
+          <div class="check-item">
+            <span class="check-glyph">✓</span>
+            <p><strong>You meet the match first</strong> - nothing starts without your OK</p>
+          </div>
+          <div class="check-item">
+            <span class="check-glyph">✓</span>
+            <p><strong>We handle DDD paperwork</strong> alongside your support coordinator</p>
+          </div>
+          <div class="check-item">
+            <span class="check-glyph">✓</span>
+            <p><strong>One team stays involved</strong> after the match is made</p>
+          </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Request a Match</button>
-      <p class="form-phone-line">Or call <a href="tel:+17329934163">(732) 993-4163</a> - a real person picks up.</p>
-    </form>
+    </div>
   </div>
 </section>
 
 <!-- SECTION 6 - FOOTER -->
 <footer class="site-footer">
   <div class="footer-row">
-    <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+    <div class="footer-logo-link">
+      <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+      <span class="footer-logo-text">ASG Home Care</span>
+    </div>
     <div class="footer-contact">1451 NJ-88 Suite 2, Brick, NJ 08724 · (732) 993-4163 · info@asghomecare.com</div>
     <a href="/faq/" class="faq-link">FAQ</a>
   </div>
@@ -194,5 +247,7 @@
 </footer>
 
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/analytics.js"></script>
+<script src="/assets/js/reveal.js"></script>
 </body>
 </html>

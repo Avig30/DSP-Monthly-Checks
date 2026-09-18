@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <title>DDD Services in New Jersey | ASG Home Care</title>
 <meta name="description" content="DDD services for your loved one across all of New Jersey: Individual Supports, Community-Based Supports, Behavioral Supports, and In-Home Respite.">
 <link rel="canonical" href="https://www.asghomecare.com/services/">
@@ -14,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JS8RNTLKC"></script>
@@ -26,19 +30,21 @@
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
       <img src="/assets/img/logo.png" alt="ASG Home Care logo">
+      <span class="logo-text">ASG Home Care</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="/">Home</a>
-      <a href="/family-caregivers/" class="active-accent">Get Paid to Care for Family</a>
-      <a href="/services/" class="active-accent">Services</a>
+      <a href="/family-caregivers/">Get Paid to Care for Family</a>
+      <a href="/services/">Services</a>
       <a href="/find-a-dsp/">Find a DSP</a>
       <a href="/become-a-dsp/">Become a DSP</a>
       <a href="/about/">About</a>
@@ -48,13 +54,13 @@
   </div>
 </header>
 
-<!-- SECTION 1 - HERO -->
-<section class="hero">
-  <div class="wrap hero-inner single-col">
+<!-- SECTION 1 - HERO (single-col, content-only) -->
+<section class="hero reveal" id="main">
+  <div class="wrap-narrow hero-inner single-col" style="max-width: 780px;">
     <div>
-      <span class="pill">SERVICES</span>
-      <h1>DDD services for your loved one, across all of New Jersey.</h1>
-      <p class="hero-body">ASG Home Care is approved by DDD - New Jersey's Division of Developmental Disabilities. We support people with intellectual and developmental disabilities at home and in the community, with care from a trained DSP or from a family member we hire and train. Every plan is built around your loved one's goals.</p>
+      <span class="eyebrow-lg">Services</span>
+      <h1 class="display-1">DDD services for your loved one, across all of New Jersey.</h1>
+      <p class="hero-body" style="margin: 20px 0 28px;">ASG Home Care is approved by DDD - New Jersey's Division of Developmental Disabilities. We support people with intellectual and developmental disabilities at home and in the community, with care from a trained DSP or from a family member we hire and train. Every plan is built around your loved one's goals.</p>
       <div class="btn-row">
         <a href="/contact/" class="btn btn-primary">Speak With a Specialist</a>
       </div>
@@ -62,27 +68,43 @@
   </div>
 </section>
 
-<!-- SECTION 2 - SUPPORT BUILT AROUND REAL LIFE -->
-<section class="bg-white">
+<!-- SECTION 2 - INTRO -->
+<section class="bg-white reveal">
   <div class="wrap">
-    <div class="section-intro">
-      <h2 class="section-heading">Support built around real life</h2>
-      <p class="section-intro-body" style="margin-top: 18px;">Every person deserves to live with dignity, purpose, and confidence. Our services support the individual and the family around them. We meet people where they are - at home, in their neighborhoods, in their daily routines - and we work on practical skills, stronger relationships, and structure that lasts. And when a family member steps into the DSP role, we train and support them for as long as they need it.</p>
+    <div class="section-intro text-center" style="margin-left:auto;margin-right:auto;max-width:760px;">
+      <h2 class="display-2">Support built around real life</h2>
+      <p class="section-intro-body" style="margin-top: 18px;">Every person deserves to live with dignity, purpose, and confidence. Our services support the individual and the family around them. We meet people where they are - at home, in their neighborhoods, in their daily routines - and we work on practical skills, stronger relationships, and structure that lasts. When a family member steps into the DSP role, we train and support them for as long as they need it.</p>
     </div>
-    <div class="card-grid cols-2">
-      <div class="card">
+  </div>
+</section>
+
+<!-- SECTION 3 - FOUR SERVICES, alternating detail rows (distinct from a card grid) -->
+<section class="bg-light reveal">
+  <div class="wrap-narrow">
+    <div class="service-detail-row">
+      <div class="service-panel tone-teal"><span class="panel-glyph">✦</span>Individual Supports</div>
+      <div>
         <h3>Individual Supports</h3>
         <p>One-on-one care focused on life skills, communication, and independence - at home or out in the community. Cooking, money management, daily routines: we build the plan around your loved one's goals.</p>
       </div>
-      <div class="card">
+    </div>
+    <div class="service-detail-row reverse">
+      <div class="service-panel tone-blue"><span class="panel-glyph">◎</span>Community-Based Supports</div>
+      <div>
         <h3>Community-Based Supports (CBS)</h3>
         <p>Help getting out and staying active: transportation, errands, social outings, recreation. Our DSPs help individuals build confidence and stay connected to their community.</p>
       </div>
-      <div class="card">
+    </div>
+    <div class="service-detail-row">
+      <div class="service-panel tone-green"><span class="panel-glyph">◈</span>Behavioral Supports</div>
+      <div>
         <h3>Behavioral Supports</h3>
         <p>Personalized behavior plans, created and overseen by trained specialists, to reduce unsafe behaviors and build positive routines at home and in the community.</p>
       </div>
-      <div class="card">
+    </div>
+    <div class="service-detail-row reverse">
+      <div class="service-panel tone-navy"><span class="panel-glyph">⟡</span>In-Home Respite</div>
+      <div>
         <h3>In-Home Respite</h3>
         <p>Short-term care that gives families a real break, while your loved one stays safe and comfortable at home. Scheduled regularly or as needed, always with a DSP you trust.</p>
       </div>
@@ -90,63 +112,79 @@
   </div>
 </section>
 
-<!-- SECTION 3 - WHY GUIDANCE MATTERS -->
-<section class="bg-light">
-  <div class="wrap">
-    <div class="section-intro">
-      <h2 class="section-heading">Why guidance for everyday life matters</h2>
-      <p class="section-intro-body" style="margin-top: 18px;">Independence is built in morning routines, grocery trips, and ordinary afternoons. Consistent one-on-one support turns those moments into progress, and gives families peace of mind that someone reliable is by their loved one's side.</p>
-    </div>
+<!-- SECTION 4 - WHY GUIDANCE MATTERS -->
+<section class="bg-white reveal">
+  <div class="wrap quote-band">
+    <blockquote>"Independence is built in morning routines, grocery trips, and ordinary afternoons. Consistent one-on-one support turns those moments into progress."</blockquote>
+    <span class="quote-role">Why guidance for everyday life matters</span>
   </div>
 </section>
 
-<!-- SECTION 4 - 4 SIMPLE STEPS -->
-<section class="bg-white">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">What to expect: 4 simple steps</h2>
-    <div class="card-grid">
-      <div class="card">
+<!-- SECTION 5 - WHAT TO EXPECT, alternating vertical timeline -->
+<section class="bg-light reveal">
+  <div class="wrap-narrow">
+    <div class="section-intro text-center" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow-lg" style="justify-content:center;">What to expect</span>
+      <h2 class="display-2">Four simple steps</h2>
+    </div>
+    <div class="timeline-alt" style="margin-top: var(--space-6);">
+      <div class="timeline-item side-left">
+        <div class="timeline-text">
+          <h3>1. Reach out</h3>
+          <p>Fill out our Find a DSP form or call our office. From the first call, our team listens and explains what to expect.</p>
+        </div>
         <div class="step-circle">1</div>
-        <h3>Reach Out</h3>
-        <p>Fill out our Find a DSP form or call our office. From the first call, our team listens and explains what to expect, so you always know the next step.</p>
+        <div class="timeline-spacer"></div>
       </div>
-      <div class="card">
+      <div class="timeline-item side-right">
+        <div class="timeline-spacer"></div>
         <div class="step-circle">2</div>
-        <h3>Review Your Needs</h3>
-        <p>We take time to understand your family's situation: what supports are needed, when, and how you want them delivered. A truly personalized plan, built around your family.</p>
+        <div class="timeline-text">
+          <h3>2. Review your needs</h3>
+          <p>We take time to understand your family's situation: what supports are needed, when, and how you want them delivered.</p>
+        </div>
       </div>
-      <div class="card">
+      <div class="timeline-item side-left">
+        <div class="timeline-text">
+          <h3>3. Choose your path</h3>
+          <p>Have a family member step into the DSP role with our full training and guidance, or let us match you with one of our pre-screened professionals.</p>
+        </div>
         <div class="step-circle">3</div>
-        <h3>Choose Your Path</h3>
-        <p>You decide: have a family member step into the DSP role with our full training and guidance, or let us match you with one of our pre-screened professionals. Either way, the right fit for your loved one.</p>
+        <div class="timeline-spacer"></div>
       </div>
-      <div class="card">
+      <div class="timeline-item side-right">
+        <div class="timeline-spacer"></div>
         <div class="step-circle">4</div>
-        <h3>Begin Services</h3>
-        <p>Once everything is in place, services can begin quickly. We stay with you: regular check-ins, support for your DSP, and real attention to progress.</p>
+        <div class="timeline-text">
+          <h3>4. Begin services</h3>
+          <p>We stay with you: regular check-ins, support for your DSP, and real attention to progress.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 5 - STILL HAVE QUESTIONS -->
-<section class="bg-light">
+<!-- SECTION 6 - CLOSING CTA -->
+<section class="bg-white reveal">
   <div class="wrap">
-    <div class="section-intro" style="margin-bottom: 32px;">
-      <h2 class="section-heading">Still have questions? We are here to help.</h2>
-      <p class="section-intro-body" style="margin-top: 18px;">Whether you are a family exploring DDD services for the first time, a support coordinator looking for a reliable partner, or someone interested in becoming a DSP - our team is ready to guide you. (A support coordinator is the state-assigned case manager who helps your family plan services. We work with them every day.)</p>
-    </div>
-    <div class="btn-row">
-      <a href="/family-caregivers/" class="btn btn-primary">Get Paid to Care for Family</a>
-      <a href="/find-a-dsp/" class="btn btn-secondary">Find a DSP</a>
+    <div class="cta-band">
+      <h2 class="display-2">Still have questions? We are here to help.</h2>
+      <p>Whether you are a family exploring DDD services for the first time, a support coordinator looking for a reliable partner, or someone interested in becoming a DSP - our team is ready to guide you. (A support coordinator is the state-assigned case manager who helps your family plan services. We work with them every day.)</p>
+      <div class="btn-row">
+        <a href="/family-caregivers/" class="btn btn-primary">Get Paid to Care for Family</a>
+        <a href="/find-a-dsp/" class="btn btn-secondary" style="background:transparent;color:var(--white);border-color:var(--white);">Find a DSP</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 6 - FOOTER -->
+<!-- SECTION 7 - FOOTER -->
 <footer class="site-footer">
   <div class="footer-row">
-    <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+    <div class="footer-logo-link">
+      <img src="/assets/img/logo.png" alt="ASG Home Care logo" class="footer-logo">
+      <span class="footer-logo-text">ASG Home Care</span>
+    </div>
     <div class="footer-contact">1451 NJ-88 Suite 2, Brick, NJ 08724 · (732) 993-4163 · info@asghomecare.com</div>
     <a href="/faq/" class="faq-link">FAQ</a>
   </div>
@@ -154,5 +192,7 @@
 </footer>
 
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/analytics.js"></script>
+<script src="/assets/js/reveal.js"></script>
 </body>
 </html>
