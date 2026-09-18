@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JS8RNTLKC"></script>
@@ -25,7 +25,7 @@
   gtag('config', 'G-0JS8RNTLKC');
 </script>
 </head>
-<body>
+<body class="v2">
 
 <header class="site-header">
   <div class="header-inner">
@@ -37,7 +37,7 @@
     </button>
     <nav class="main-nav">
       <a href="/">Home</a>
-      <a href="/family-caregivers/" class="active-accent">Get Paid to Care for Family</a>
+      <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
       <a href="/find-a-dsp/">Find a DSP</a>
       <a href="/become-a-dsp/">Become a DSP</a>
@@ -60,114 +60,238 @@
 </section>
 
 <!-- SECTION 2 - GETTING PAID TO CARE FOR FAMILY -->
-<section class="bg-white">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">Getting paid to care for family</h2>
-    <div class="card-grid cols-2">
-      <div class="card">
-        <h3>Can I really get paid to care for my own family member?</h3>
-        <p>Yes. If your family member qualifies for New Jersey's DDD (Division of Developmental Disabilities) program, a parent, sibling, or other relative can become their paid DSP. We handle the enrollment, training, scheduling, and payroll.</p>
-      </div>
-      <div class="card">
-        <h3>Who in my family can be paid?</h3>
-        <p>Parents, siblings, and other relatives can step into the DSP role. Every family's situation is different - reach out and we will confirm exactly what works for yours.</p>
-      </div>
-      <div class="card">
-        <h3>What does it cost my family?</h3>
-        <p>Nothing. There is no cost to your family, ever.</p>
-      </div>
-      <div class="card">
-        <h3>My loved one is not enrolled with DDD yet. Can we still start?</h3>
-        <p>Yes - talk to us anyway. We will tell you exactly what the next step is and walk you through it.</p>
-      </div>
-      <div class="card">
-        <h3>What training is required?</h3>
-        <p>The required DSP training, which is free - with our team walking you through every step.</p>
-      </div>
-      <div class="card">
-        <h3>What if I need a break?</h3>
-        <p>That is what our In-Home Respite service is for - a trained, pre-screened DSP you trust steps in while you rest.</p>
-      </div>
+<section class="bg-white reveal">
+  <div class="wrap faq-layout">
+    <div class="faq-intro">
+      <h2 class="section-heading">Getting paid to care for family</h2>
+      <p>Questions families ask before enrolling in NJ's DDD paid family caregiver path.</p>
     </div>
-    <div class="btn-row" style="margin-top: 32px;">
-      <a href="/family-caregivers/" class="btn btn-primary">Get Paid to Care for Family</a>
+    <div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-1" id="faq-trigger-1">
+          <span>Can I really get paid to care for my own family member?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1" hidden>
+          <div class="accordion-panel-inner">Yes. If your family member qualifies for New Jersey's DDD (Division of Developmental Disabilities) program, a parent, sibling, or other relative can become their paid DSP. We handle the enrollment, training, scheduling, and payroll.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-trigger-2">
+          <span>Who in my family can be paid?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
+          <div class="accordion-panel-inner">Parents, siblings, and other relatives can step into the DSP role. Every family's situation is different - reach out and we will confirm exactly what works for yours.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-trigger-3">
+          <span>What does it cost my family?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
+          <div class="accordion-panel-inner">Nothing. There is no cost to your family, ever.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-4" id="faq-trigger-4">
+          <span>My loved one is not enrolled with DDD yet. Can we still start?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
+          <div class="accordion-panel-inner">Yes - talk to us anyway. We will tell you exactly what the next step is and walk you through it.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-5" id="faq-trigger-5">
+          <span>What training is required?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden>
+          <div class="accordion-panel-inner">The required DSP training, which is free - with our team walking you through every step.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-6" id="faq-trigger-6">
+          <span>What if I need a break?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-6" role="region" aria-labelledby="faq-trigger-6" hidden>
+          <div class="accordion-panel-inner">That is what our In-Home Respite service is for - a trained, pre-screened DSP you trust steps in while you rest.</div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top: 28px;">
+        <a href="/family-caregivers/" class="btn btn-primary">Get Paid to Care for Family</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SECTION 3 - FINDING A DSP & SERVICES -->
-<section class="bg-light">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">Finding a DSP &amp; our services</h2>
-    <div class="card-grid cols-2">
-      <div class="card">
-        <h3>What is a DSP?</h3>
-        <p>A Direct Support Professional is a trained professional who works one-on-one with your loved one - at home and out in the community.</p>
-      </div>
-      <div class="card">
-        <h3>How do you match a DSP with my loved one?</h3>
-        <p>We pre-screen every DSP, match on personality and schedule, and you meet your match before anything starts. Then we stay involved.</p>
-      </div>
-      <div class="card">
-        <h3>What services does ASG provide?</h3>
-        <p>Individual Supports, Community-Based Supports, Behavioral Supports, and In-Home Respite.</p>
-      </div>
-      <div class="card">
-        <h3>Which areas do you serve?</h3>
-        <p>All 21 New Jersey counties.</p>
-      </div>
-      <div class="card">
-        <h3>How fast can services start?</h3>
-        <p>We move fast and keep you updated at every step. Timing depends on DDD enrollment and the right match - call us and we will give you a straight answer for your situation.</p>
-      </div>
+<section class="bg-light reveal soft-shape-bg">
+  <div class="wrap faq-layout">
+    <div class="faq-intro">
+      <h2 class="section-heading">Finding a DSP &amp; our services</h2>
+      <p>What a DSP does, how matching works, and what ASG provides across New Jersey.</p>
     </div>
-    <div class="btn-row" style="margin-top: 32px;">
-      <a href="/find-a-dsp/" class="btn btn-primary">Find a DSP</a>
-      <a href="/services/" class="btn btn-secondary">See All Services</a>
+    <div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-7" id="faq-trigger-7">
+          <span>What is a DSP?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-7" role="region" aria-labelledby="faq-trigger-7" hidden>
+          <div class="accordion-panel-inner">A Direct Support Professional is a trained professional who works one-on-one with your loved one - at home and out in the community.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-8" id="faq-trigger-8">
+          <span>How do you match a DSP with my loved one?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-8" role="region" aria-labelledby="faq-trigger-8" hidden>
+          <div class="accordion-panel-inner">We pre-screen every DSP, match on personality and schedule, and you meet your match before anything starts. Then we stay involved.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-9" id="faq-trigger-9">
+          <span>What services does ASG provide?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-9" role="region" aria-labelledby="faq-trigger-9" hidden>
+          <div class="accordion-panel-inner">Individual Supports, Community-Based Supports, Behavioral Supports, and In-Home Respite.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-10" id="faq-trigger-10">
+          <span>Which areas do you serve?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-10" role="region" aria-labelledby="faq-trigger-10" hidden>
+          <div class="accordion-panel-inner">All 21 New Jersey counties.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-11" id="faq-trigger-11">
+          <span>How fast can services start?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-11" role="region" aria-labelledby="faq-trigger-11" hidden>
+          <div class="accordion-panel-inner">We move fast and keep you updated at every step. Timing depends on DDD enrollment and the right match - call us and we will give you a straight answer for your situation.</div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top: 28px;">
+        <a href="/find-a-dsp/" class="btn btn-primary">Find a DSP</a>
+        <a href="/services/" class="btn btn-secondary">See All Services</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SECTION 4 - BECOMING A DSP -->
-<section class="bg-white">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">Becoming a DSP</h2>
-    <div class="card-grid cols-2">
-      <div class="card">
-        <h3>Do I need experience to become a DSP?</h3>
-        <p>No. Whether you have care experience or are brand new, we will train you - free training and ongoing coaching included.</p>
-      </div>
-      <div class="card">
-        <h3>How do I apply?</h3>
-        <p>The application on our Become a DSP page takes about two minutes. We take it from there.</p>
-      </div>
-      <div class="card">
-        <h3>What support do DSPs get at ASG?</h3>
-        <p>Matches that fit your schedule and your strengths, 24/7 support from a team that answers the phone, and competitive pay, always on time.</p>
-      </div>
+<section class="bg-white reveal">
+  <div class="wrap faq-layout">
+    <div class="faq-intro">
+      <h2 class="section-heading">Becoming a DSP</h2>
+      <p>What it takes to apply and what support looks like once you're in.</p>
     </div>
-    <div class="btn-row" style="margin-top: 32px;">
-      <a href="/become-a-dsp/" class="btn btn-primary">Become a DSP</a>
+    <div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-12" id="faq-trigger-12">
+          <span>Do I need experience to become a DSP?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-12" role="region" aria-labelledby="faq-trigger-12" hidden>
+          <div class="accordion-panel-inner">No. Whether you have care experience or are brand new, we will train you - free training and ongoing coaching included.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-13" id="faq-trigger-13">
+          <span>How do I apply?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-13" role="region" aria-labelledby="faq-trigger-13" hidden>
+          <div class="accordion-panel-inner">The application on our Become a DSP page takes about two minutes. We take it from there.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-14" id="faq-trigger-14">
+          <span>What support do DSPs get at ASG?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-14" role="region" aria-labelledby="faq-trigger-14" hidden>
+          <div class="accordion-panel-inner">Matches that fit your schedule and your strengths, 24/7 support from a team that answers the phone, and competitive pay, always on time.</div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top: 28px;">
+        <a href="/become-a-dsp/" class="btn btn-primary">Become a DSP</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SECTION 5 - SUPPORT COORDINATORS & REACHING US -->
-<section class="bg-light">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 44px;">Support coordinators &amp; reaching us</h2>
-    <div class="card-grid cols-2">
-      <div class="card">
-        <h3>I am a support coordinator. How do I connect a family with ASG?</h3>
-        <p>Call us or send the contact form - we work with support coordinators every day and answer fast.</p>
-      </div>
-      <div class="card">
-        <h3>How do I reach you?</h3>
-        <p>Call <a href="tel:+17329934163">(732) 993-4163</a>, email <a href="mailto:info@asghomecare.com">info@asghomecare.com</a>, or send the contact form. Our office is at 1451 NJ-88 Suite 2, Brick, NJ 08724, open Monday-Friday, 9:00 am - 5:00 pm. Urgent issues for current families and DSPs: we answer 24/7.</p>
-      </div>
+<section class="bg-light reveal">
+  <div class="wrap faq-layout">
+    <div class="faq-intro">
+      <h2 class="section-heading">Support coordinators &amp; reaching us</h2>
+      <p>For support coordinators, and anyone who just wants a straight answer.</p>
     </div>
-    <div class="btn-row" style="margin-top: 32px;">
-      <a href="/contact/" class="btn btn-primary">Speak With a Specialist</a>
+    <div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-15" id="faq-trigger-15">
+          <span>I am a support coordinator. How do I connect a family with ASG?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-15" role="region" aria-labelledby="faq-trigger-15" hidden>
+          <div class="accordion-panel-inner">Call us or send the contact form - we work with support coordinators every day and answer fast.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-heading">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-16" id="faq-trigger-16">
+          <span>How do I reach you?</span>
+          <span class="accordion-glyph" aria-hidden="true"></span>
+        </button>
+        </h3>
+        <div class="accordion-panel" id="faq-panel-16" role="region" aria-labelledby="faq-trigger-16" hidden>
+          <div class="accordion-panel-inner">Call <a href="tel:+17329934163">(732) 993-4163</a>, email <a href="mailto:info@asghomecare.com">info@asghomecare.com</a>, or send the contact form. Our office is at 1451 NJ-88 Suite 2, Brick, NJ 08724, open Monday-Friday, 9:00 am - 5:00 pm. Urgent issues for current families and DSPs: we answer 24/7.</div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top: 28px;">
+        <a href="/contact/" class="btn btn-primary">Speak With a Specialist</a>
+      </div>
     </div>
   </div>
 </section>
@@ -182,6 +306,35 @@
   <div class="footer-copy">© 2026 ASG Home Care. DDD-approved provider serving all 21 NJ counties.</div>
 </footer>
 
+<div class="mobile-call-bar">
+  <a href="tel:+17329934163">📞 Call (732) 993-4163</a>
+</div>
+
 <script src="/assets/js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Can I really get paid to care for my own family member?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If your family member qualifies for New Jersey's DDD (Division of Developmental Disabilities) program, a parent, sibling, or other relative can become their paid DSP. We handle the enrollment, training, scheduling, and payroll." } },
+    { "@type": "Question", "name": "Who in my family can be paid?", "acceptedAnswer": { "@type": "Answer", "text": "Parents, siblings, and other relatives can step into the DSP role. Every family's situation is different - reach out and we will confirm exactly what works for yours." } },
+    { "@type": "Question", "name": "What does it cost my family?", "acceptedAnswer": { "@type": "Answer", "text": "Nothing. There is no cost to your family, ever." } },
+    { "@type": "Question", "name": "My loved one is not enrolled with DDD yet. Can we still start?", "acceptedAnswer": { "@type": "Answer", "text": "Yes - talk to us anyway. We will tell you exactly what the next step is and walk you through it." } },
+    { "@type": "Question", "name": "What training is required?", "acceptedAnswer": { "@type": "Answer", "text": "The required DSP training, which is free - with our team walking you through every step." } },
+    { "@type": "Question", "name": "What if I need a break?", "acceptedAnswer": { "@type": "Answer", "text": "That is what our In-Home Respite service is for - a trained, pre-screened DSP you trust steps in while you rest." } },
+    { "@type": "Question", "name": "What is a DSP?", "acceptedAnswer": { "@type": "Answer", "text": "A Direct Support Professional is a trained professional who works one-on-one with your loved one - at home and out in the community." } },
+    { "@type": "Question", "name": "How do you match a DSP with my loved one?", "acceptedAnswer": { "@type": "Answer", "text": "We pre-screen every DSP, match on personality and schedule, and you meet your match before anything starts. Then we stay involved." } },
+    { "@type": "Question", "name": "What services does ASG provide?", "acceptedAnswer": { "@type": "Answer", "text": "Individual Supports, Community-Based Supports, Behavioral Supports, and In-Home Respite." } },
+    { "@type": "Question", "name": "Which areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "All 21 New Jersey counties." } },
+    { "@type": "Question", "name": "How fast can services start?", "acceptedAnswer": { "@type": "Answer", "text": "We move fast and keep you updated at every step. Timing depends on DDD enrollment and the right match - call us and we will give you a straight answer for your situation." } },
+    { "@type": "Question", "name": "Do I need experience to become a DSP?", "acceptedAnswer": { "@type": "Answer", "text": "No. Whether you have care experience or are brand new, we will train you - free training and ongoing coaching included." } },
+    { "@type": "Question", "name": "How do I apply?", "acceptedAnswer": { "@type": "Answer", "text": "The application on our Become a DSP page takes about two minutes. We take it from there." } },
+    { "@type": "Question", "name": "What support do DSPs get at ASG?", "acceptedAnswer": { "@type": "Answer", "text": "Matches that fit your schedule and your strengths, 24/7 support from a team that answers the phone, and competitive pay, always on time." } },
+    { "@type": "Question", "name": "I am a support coordinator. How do I connect a family with ASG?", "acceptedAnswer": { "@type": "Answer", "text": "Call us or send the contact form - we work with support coordinators every day and answer fast." } },
+    { "@type": "Question", "name": "How do I reach you?", "acceptedAnswer": { "@type": "Answer", "text": "Call (732) 993-4163, email info@asghomecare.com, or send the contact form. Our office is at 1451 NJ-88 Suite 2, Brick, NJ 08724, open Monday-Friday, 9:00 am - 5:00 pm. Urgent issues for current families and DSPs: we answer 24/7." } }
+  ]
+}
+</script>
 </body>
 </html>

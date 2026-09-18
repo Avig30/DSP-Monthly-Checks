@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JS8RNTLKC"></script>
@@ -25,7 +25,7 @@
   gtag('config', 'G-0JS8RNTLKC');
 </script>
 </head>
-<body>
+<body class="v2">
 
 <header class="site-header">
   <div class="header-inner">
@@ -37,10 +37,10 @@
     </button>
     <nav class="main-nav">
       <a href="/">Home</a>
-      <a href="/family-caregivers/" class="active-accent">Get Paid to Care for Family</a>
+      <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
       <a href="/find-a-dsp/">Find a DSP</a>
-      <a href="/become-a-dsp/" class="active-accent">Become a DSP</a>
+      <a href="/become-a-dsp/">Become a DSP</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
@@ -49,25 +49,26 @@
 </header>
 
 <!-- SECTION 1 - HERO -->
-<section class="hero">
-  <div class="wrap hero-inner single-col">
-    <div>
-      <span class="pill">BECOME A DSP</span>
-      <h1>Become a Direct Support Professional in New Jersey.</h1>
-      <p class="hero-body">Do meaningful, one-on-one work with people with developmental disabilities - with real training, real support, and competitive pay. Whether you have care experience or are brand new, we will train you.</p>
-      <div class="btn-row">
-        <a href="#apply-form" class="btn btn-primary">Apply Now</a>
-      </div>
-      <p class="family-link-line">Family member of someone with a developmental disability? <a href="/family-caregivers/">You may be able to get paid to care for your own loved one.</a></p>
+<section class="gradient-hero">
+  <span class="leaf-accent leaf-1" aria-hidden="true"></span>
+  <span class="leaf-accent leaf-2" aria-hidden="true"></span>
+  <span class="leaf-accent leaf-3" aria-hidden="true"></span>
+  <div class="wrap">
+    <span class="pill">BECOME A DSP</span>
+    <h1>Become a Direct Support Professional in New Jersey.</h1>
+    <p class="hero-body">Do meaningful, one-on-one work with people with developmental disabilities - with real training, real support, and competitive pay. Whether you have care experience or are brand new, we will train you.</p>
+    <div class="btn-row">
+      <a href="#apply-form" class="btn btn-primary">Apply Now</a>
     </div>
+    <p class="family-link-line">Family member of someone with a developmental disability? <a href="/family-caregivers/">You may be able to get paid to care for your own loved one.</a></p>
   </div>
 </section>
 
 <!-- SECTION 2 - WHY DSPS CHOOSE ASG -->
-<section class="bg-white">
+<section class="bg-white reveal soft-shape-bg">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 44px;">Why DSPs choose ASG</h2>
-    <div class="card-grid cols-2">
+    <div class="card-grid card-grid-3">
       <div class="card check-item">
         <span class="check-glyph">✓</span>
         <p><strong>Fast onboarding</strong> - we move fast.</p>
@@ -97,9 +98,10 @@
 </section>
 
 <!-- SECTION 3 - WHAT THE JOB IS -->
-<section class="bg-light">
+<section class="bg-light reveal">
   <div class="wrap">
-    <div class="section-intro">
+    <div class="statement-band">
+      <span class="band-leaf" aria-hidden="true"></span>
       <h2 class="section-heading">What the job is</h2>
       <p class="section-intro-body" style="margin-top: 18px;">One-on-one support with daily routines, life skills, and community activities. You build a real relationship with one person and watch them grow. It is care you can be proud of.</p>
     </div>
@@ -107,7 +109,7 @@
 </section>
 
 <!-- SECTION 4 - APPLICATION FORM -->
-<section class="bg-white" id="apply-form">
+<section class="bg-white reveal" id="apply-form">
   <div class="wrap">
     <form class="form-card" action="https://formspree.io/f/mvkodreg" method="POST">
       <h3>Apply in two minutes.</h3>
@@ -168,6 +170,10 @@
   </div>
   <div class="footer-copy">© 2026 ASG Home Care. DDD-approved provider serving all 21 NJ counties.</div>
 </footer>
+
+<div class="mobile-call-bar">
+  <a href="tel:+17329934163">📞 Call (732) 993-4163</a>
+</div>
 
 <script src="/assets/js/main.js"></script>
 </body>
