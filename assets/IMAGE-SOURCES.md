@@ -28,26 +28,6 @@ passed are in use. Nothing borderline was kept "because it looked good."
 - Alt text: "A young woman with Down syndrome training one-on-one with a boxing coach in a gym"
 - Adult 21+: confirmed — adult female facial structure, jawline, and body proportions; Pexels' own title/tags describe the subject as a "woman," not a girl or teen; no child-coded styling or setting.
 
-### assets/img/fdsp-independent-home.webp
-- Source: https://www.pexels.com/photo/young-girl-using-laptop-inside-a-restaurant-4058222/
-  (Pexels' own page title uses "girl" despite showing an adult woman — see
-  note below.)
-- Photographer: Cliff Booth
-- License: Pexels License (free for commercial use, no attribution required)
-- Used on: /find-a-dsp/ — second section (independent home life)
-- Alt text: "A young woman with Down syndrome focused on her laptop at a bright home dining table"
-- Adult 21+: confirmed by direct visual inspection — mature adult facial
-  features, adult body proportions, independent home setting (no pediatric
-  cues). Same subject/shoot as fdsp-fitness-support.webp (Cliff Booth,
-  March 2, 2020), reused only within this one page, per the "no repeated
-  shoot across pages" rule.
-- Note: Pexels' auto-generated page title calls this "Young Girl," which
-  conflicts with the photographer's own titling of the companion photo in
-  the same shoot as "Woman Doing Boxing." We went with direct visual
-  inspection over the inconsistent auto-title — the subject is clearly the
-  same adult woman in both photos — but are flagging the discrepancy here
-  rather than hiding it.
-
 ### assets/img/hero-home.jpg (pre-existing, re-audited)
 - Used on: / (Home) — hero
 - Adult 21+: confirmed — the person receiving support is a visibly adult
@@ -79,6 +59,16 @@ added to any page. Listed transparently rather than silently dropped.
   figure wearing an event lanyard, read as plausibly under 21. Rather than
   guess, this was dropped entirely. Intended slot: Services page
   ("community-based supports").
+- **pexels-cliff-booth-4058222** ("young girl using laptop inside a
+  restaurant," formerly committed here as `fdsp-independent-home.webp`) —
+  approved in an earlier round on the reasoning that it was the same adult
+  woman as the approved boxing photo (same shoot, same day), just
+  mislabeled by Pexels. On review that reasoning was rejected: it's the
+  same person/shoot as an already-used photo, and the source page's own
+  "girl" label should have been a hard stop rather than something to
+  reason past. The file has been permanently deleted from
+  `assets/img/` and every reference to it removed from
+  `find-a-dsp/index.html` so it can't be used by accident.
 
 ## Open gaps — flagged, not filled with irrelevant stock
 
