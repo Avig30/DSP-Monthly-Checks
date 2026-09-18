@@ -36,7 +36,7 @@ appear anywhere on this page).
 
 ## assets/img/pfcp-adult-shopping.webp
 - Source: https://www.pexels.com/photo/shopping-down-syndrome-5268617/
-- Photographer: not confirmed - see note below
+- Photographer: Viviannna Welflin
 - License: Pexels License (free for commercial use, no attribution required
   - Pexels has a single uniform license across its whole catalog, no
   premium/paid tier exists, so this holds regardless of photographer)
@@ -46,16 +46,12 @@ appear anywhere on this page).
   independence moment. A different person and a different, distinctly less
   polished/staged photographer's shoot than every other photo on the page.
 
-Note on this photo: Pexels' website became unreachable to my tools partway
-through this round (repeated HTTP 503s over roughly 15 minutes, both for
-Pexels and for an unrelated test URL, indicating a tooling outage rather
-than a Pexels-specific block) after I had already confirmed this image
-downloads directly from Pexels' own CDN (images.pexels.com, served via
-Cloudflare with standard Pexels caching headers) and visually verified its
-content. I was not able to reload the photo's page to capture the exact
-photographer byline before finishing this round - the source URL above
-will show it once Pexels is reachable again. Flagging this rather than
-guessing a name.
+Note on this photo: the photographer byline was not visible in an earlier
+round due to a roughly 15-minute tooling outage (repeated HTTP 503s
+fetching Pexels and an unrelated test URL) after the image itself had
+already been downloaded and visually verified. The source page was
+re-fetched once tooling recovered and the byline above (Viviannna Welflin)
+is now confirmed directly from https://www.pexels.com/photo/shopping-down-syndrome-5268617/.
 
 Note on tone: this photo is noticeably more candid/snapshot-style than the
 hero, boxing, and chef photos, which all come from more polished
