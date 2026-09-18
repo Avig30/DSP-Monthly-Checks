@@ -198,13 +198,24 @@ header.site-header {
 .logo-link {
   display: flex;
   align-items: center;
+  gap: 10px;
   flex-shrink: 0;
 }
 
 .logo-link img {
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
   object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--navy);
+  white-space: nowrap;
+  line-height: 1;
 }
 
 nav.main-nav {
@@ -543,12 +554,28 @@ footer.site-footer {
   margin: 0 auto;
 }
 
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .footer-logo {
-  height: 44px;
-  width: 44px;
+  height: 38px;
+  width: 38px;
   object-fit: contain;
   filter: brightness(0) invert(1);
   flex-shrink: 0;
+}
+
+.footer-logo-text {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--white);
+  white-space: nowrap;
+  line-height: 1;
 }
 
 footer.site-footer .footer-contact {
