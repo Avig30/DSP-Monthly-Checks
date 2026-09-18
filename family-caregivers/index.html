@@ -85,6 +85,78 @@
   }
   .soft-shape-bg > .wrap { position: relative; z-index: 1; }
 
+  /* Non-photo editorial composition (replaces a photo slot): family
+     care, listening, support, and getting paid, in ASG's palette and
+     type - no photo, no logo/abstract placeholder. */
+  .editorial-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 24px 48px rgba(24,61,87,.16);
+    background: linear-gradient(155deg, var(--green-tint) 0%, #EAF4F2 55%, var(--bg-light) 100%);
+    aspect-ratio: 4 / 5;
+    padding: 40px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+  }
+  .editorial-panel::before,
+  .editorial-panel::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .editorial-panel::before {
+    width: 220px; height: 220px;
+    background: rgba(154,197,125,.45);
+    top: -70px; right: -60px;
+  }
+  .editorial-panel::after {
+    width: 200px; height: 200px;
+    background: rgba(18,113,113,.16);
+    bottom: -80px; left: -60px;
+  }
+  .editorial-panel-badge {
+    position: relative;
+    z-index: 1;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: 0 10px 24px rgba(24,61,87,.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+  }
+  .editorial-panel-rows {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .editorial-panel-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 14px 18px;
+    box-shadow: 0 6px 16px rgba(24,61,87,.06);
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 15.5px;
+  }
+  .editorial-panel-row .row-icon { font-size: 20px; flex-shrink: 0; }
+  @media (max-width: 760px) {
+    .editorial-panel { aspect-ratio: 5 / 4; padding: 28px 24px; gap: 20px; }
+  }
+
   .promise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
   .promise-item {
     text-align: center;
@@ -228,6 +300,21 @@
       text-transform: uppercase;
       letter-spacing: .04em;
     }
+    .compare-cell { font-size: 15.5px; padding: 14px 18px; }
+    .compare-note, .ddd-resources { margin-top: 16px; }
+
+    /* Tighten vertical rhythm on mobile for the comparison, steps,
+       FAQ, and family-contact sections specifically (content
+       unchanged - spacing only). */
+    #compare-section, #steps-section, #faq-section, #family-form {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    #steps-section .card-grid-3 { gap: 16px; }
+    #faq-section .faq-item { margin-bottom: 8px; }
+    #faq-section .faq-item summary { padding: 14px 18px; }
+    #faq-section .faq-answer { padding: 0 18px 14px; }
+    #family-form .form-card { padding: 28px 20px; }
   }
 
   .faq-item {
@@ -356,8 +443,13 @@
       <p class="section-intro-body" style="margin-top: 18px;">This page is for New Jersey families of an adult with an intellectual or developmental disability - enrolled with NJ DDD or possibly eligible - who want to get paid for the caregiving they already do, not eldercare or paid family leave.</p>
       <p class="section-intro-body" style="margin-top: 14px;">Years of appointments, routines, and advocacy - you've already done the hard part.</p>
     </div>
-    <div class="hero-photo">
-      <img src="/assets/img/pfcp-adult-shopping.webp" alt="An adult woman with Down syndrome collecting shopping carts at a New Jersey grocery store" loading="lazy">
+    <div class="editorial-panel" role="img" aria-label="Family care, listening, support, and getting paid for the care you already give">
+      <div class="editorial-panel-badge" aria-hidden="true">🤝</div>
+      <div class="editorial-panel-rows">
+        <div class="editorial-panel-row"><span class="row-icon" aria-hidden="true">💬</span> Someone who listens</div>
+        <div class="editorial-panel-row"><span class="row-icon" aria-hidden="true">🤲</span> Real, hands-on support</div>
+        <div class="editorial-panel-row"><span class="row-icon" aria-hidden="true">💚</span> Paid for the care you give</div>
+      </div>
     </div>
   </div>
 </section>
@@ -442,7 +534,7 @@
 </section>
 
 <!-- SECTION 6 - TWO WAYS TO GET PAID -->
-<section class="bg-light reveal">
+<section class="bg-light reveal" id="compare-section">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 12px;">Two ways to get paid</h2>
     <p class="compare-intro">Self-direction is DDD's alternative to traditional provider-managed services. Both paths are legitimate - here's the honest difference.</p>
@@ -485,7 +577,7 @@
 </section>
 
 <!-- SECTION 7 - HOW IT WORKS -->
-<section class="bg-white reveal">
+<section class="bg-white reveal" id="steps-section">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 44px;">How it works: three steps</h2>
     <div class="card-grid card-grid-3">
@@ -522,7 +614,7 @@
 </section>
 
 <!-- SECTION 9 - FAQ -->
-<section class="bg-white reveal">
+<section class="bg-white reveal" id="faq-section">
   <div class="wrap faq-layout">
     <div class="faq-intro">
       <h2 class="section-heading">Questions families ask</h2>
