@@ -1153,6 +1153,50 @@ a:focus-visible {
 }
 @keyframes leafDrift { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(-14px) rotate(6deg); } }
 
+/* Minimalist value list — plain square-bullet rows, no card or border,
+   distinct from card-grid/chip-cloud/service-grid used elsewhere */
+.value-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-5);
+}
+.value-list-item { padding-left: 26px; position: relative; }
+.value-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: var(--teal);
+  border-radius: 2px;
+}
+.value-list-item h3 { font-family: var(--font-display); font-weight: 600; font-size: 19px; color: var(--navy); margin-bottom: 6px; }
+.value-list-item p { color: var(--muted); font-size: 15px; }
+@media (max-width: 900px) {
+  .value-list { grid-template-columns: 1fr; }
+}
+
+/* Founder / pull-quote card with a side rule accent (distinct from the
+   centered .quote-band treatment) */
+.quote-card {
+  border-left: 4px solid var(--teal);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-light);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.quote-card blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(19px, 1.8vw, 22px);
+  color: var(--navy);
+  line-height: 1.55;
+  margin: 0 0 var(--space-3);
+}
+.quote-card cite { display: block; font-style: normal; font-weight: 800; color: var(--teal-dark); font-size: 14.5px; }
+.quote-card .quote-role { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+
 /* Benefit chip cloud — flexible wrapped pills, distinct from a card grid */
 .chip-cloud { display: flex; flex-wrap: wrap; gap: 14px; }
 .chip {
