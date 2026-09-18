@@ -6,4 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.classList.toggle('open');
     });
   }
+
+  if (nav) {
+    var here = window.location.pathname;
+    var links = nav.querySelectorAll('a');
+    links.forEach(function (link) {
+      link.classList.remove('active-accent');
+      if (link.pathname === here) {
+        link.classList.add('active-accent');
+      }
+    });
+  }
 });
