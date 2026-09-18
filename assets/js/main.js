@@ -34,4 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  if (nav) {
+    var here = window.location.pathname;
+    var navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(function (link) {
+      link.classList.remove('active-accent');
+      link.removeAttribute('aria-current');
+      if (link.pathname === here) {
+        link.classList.add('active-accent');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  }
 });
