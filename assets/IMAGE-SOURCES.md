@@ -28,6 +28,24 @@ passed are in use. Nothing borderline was kept "because it looked good."
 - Alt text: "A young woman with Down syndrome training one-on-one with a boxing coach in a gym"
 - Adult 21+: confirmed — adult female facial structure, jawline, and body proportions; Pexels' own title/tags describe the subject as a "woman," not a girl or teen; no child-coded styling or setting.
 
+### assets/img/find-dsp-lake-outing.webp
+- Source: https://unsplash.com/photos/man-in-blue-and-white-jacket-ako5dG2fqSM
+- Photographer: Nathan Anderson
+- License: Unsplash License (free for commercial use, no attribution required) — confirmed on the photo page itself, not Unsplash+
+- Used on: /find-a-dsp/ — second section (independence/community life)
+- Alt text: "An adult man with Down syndrome on a boat on a lake"
+- Adult 21+: confirmed by direct visual inspection — visible beard/facial hair, mature adult features, genuine outdoor recreation setting.
+- Different person/shoot from every other photo on the site, including the reserved Paid Family Care set and the boxing photo (fdsp-fitness-support.webp) used elsewhere on this same page.
+
+### assets/img/about-park-bench.webp
+- Source: Unsplash, photo id AvWfCletVGk
+- Photographer/account: Hiki App (@hikiapp) — an Unsplash contributor account for the autistic/neurodivergent community; a stock-style aggregator of many different real community members' photos, not one family's photoshoot
+- License: Unsplash License (free for commercial use, no attribution required)
+- Used on: /about/ — hero
+- Alt text: "A man laughing while holding fidget spinners at an outdoor park bench"
+- Adult 21+: confirmed by direct visual inspection — full adult beard, mature face and build, real outdoor community setting (not a studio/staged shot).
+- Different person from every other photo on the site.
+
 ### assets/img/hero-home.jpg (pre-existing, re-audited)
 - Used on: / (Home) — hero
 - Adult 21+: confirmed — the person receiving support is a visibly adult
@@ -69,6 +87,8 @@ added to any page. Listed transparently rather than silently dropped.
   reason past. The file has been permanently deleted from
   `assets/img/` and every reference to it removed from
   `find-a-dsp/index.html` so it can't be used by accident.
+- **Unsplash dotm8dUpAxc** ("portrait of a nonbinary autistic person using their mobile phone indoors," Hiki App) — originally proposed for /become-a-dsp/'s hero. Rejected: age-ambiguous, the disability context isn't visible without the caption, and it's a portrait-orientation photo that would need a bad crop to fill a 16:9 hero. A further round of searching (~10 more queries, several candidates individually opened and viewed) found no landscape-native replacement that also showed a clear, caption-independent support/IDD context — the pattern held that photos with visible context (a fidget spinner in hand, headphones on) are portrait crops, and naturally-landscape photos in this space tend to be plain portraits or lifestyle shots with nothing visible connecting them to the page. Become a DSP's hero uses the blended-gradient treatment instead, by decision, not as a fallback nobody chose.
+- Also reviewed and rejected in that round: Unsplash pOu6YEQyA6k (plain green-backdrop portrait, no visible context), Unsplash NqkTxxK_2ZY ("man holding a small dog" — genuinely candid and adult, but zero visible disability context), Unsplash aM-BRQtrng8 ("two autistic friends," age-ambiguous), Unsplash YAVHheaHGi0 and oz9fHNCUhZc (both read as staged editorial/influencer photography on direct viewing).
 
 ## Open gaps — flagged, not filled with irrelevant stock
 
@@ -84,9 +104,10 @@ new photography:
 
 - Home — third photo moment for "How we support your family" (kept to the
   2 existing, re-audited photos instead of forcing a third)
-- About — hero and story bands
 - Services — all four service-area sections
-- Become a DSP — hero and "what the job is"
+- Become a DSP — hero (by decision, after a dedicated search for a landscape
+  replacement came up empty — see rejected candidates above) and
+  "what the job is"
 - Contact — hero band
 - FAQ — hero band
 

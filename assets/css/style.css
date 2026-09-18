@@ -4,20 +4,29 @@
 :root {
   --teal: #127171;
   --teal-dark: #0D5A5A;
+  --teal-light: #4FA3A0;
   --blue: #0874A6;
   --navy: #183D57;
+  --navy-deep: #0F2438;
   --body-text: #22303C;
   --muted: #5A6B78;
   --bg-light: #F4F8F9;
   --card-border: #E3ECEF;
   --green: #9AC57D;
   --green-tint: #EEF5E7;
+  --cream: #FBF8F1;
+  --coral: #E2725B;
   --white: #FFFFFF;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --leaf-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140'%3E%3Cpath fill='%23ffffff' d='M50 4C22 22 6 54 6 84c0 30 20 50 44 52 24-2 44-22 44-52C94 54 78 22 50 4Z'/%3E%3Cpath fill='none' stroke='%23127171' stroke-width='3' stroke-opacity='.35' d='M50 18v112M50 18c-16 22-16 44 0 66M50 18c16 22 16 44 0 66'/%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 
 body {
   margin: 0;
@@ -61,6 +70,25 @@ h1 {
 h2 {
   font-size: 38px;
   letter-spacing: -0.01em;
+}
+
+/* Editorial display type — scoped to the rebuilt pages (body.v2) only, so
+   the protected /family-caregivers/ page (no .v2 class) renders exactly
+   as it already does today. */
+body.v2 h1, body.v2 h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-wrap: balance;
+}
+body.v2 h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+body.v2 h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
 }
 
 .hero-body {
@@ -112,6 +140,17 @@ p { margin: 0; }
   color: var(--white);
 }
 .btn-primary:hover { background: var(--teal-dark); }
+
+/* Button hover lift/shadow — scoped to the rebuilt pages only. */
+body.v2 .btn {
+  transition: background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  body.v2 .btn:hover { transform: translateY(-2px); }
+  body.v2 .btn:active { transform: translateY(0); }
+}
+body.v2 .btn-primary { box-shadow: 0 8px 20px rgba(18,113,113,.22); }
+body.v2 .btn-primary:hover { box-shadow: 0 10px 24px rgba(13,90,90,.3); }
 
 .btn-secondary {
   background: var(--white);
@@ -228,6 +267,31 @@ nav.main-nav a:hover {
   padding: 80px 0;
 }
 
+/* Layered, blended ASG gradient hero — scoped to the rebuilt pages only,
+   so the protected /family-caregivers/ page's plain hero is untouched. */
+body.v2 .hero {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0;
+  background:
+    radial-gradient(560px 420px at 88% -10%, rgba(18,113,113,.16), transparent 65%),
+    radial-gradient(480px 380px at -8% 105%, rgba(154,197,125,.28), transparent 60%),
+    linear-gradient(160deg, var(--cream) 0%, #F2F8F4 55%, #EEF5E7 100%);
+}
+body.v2 .hero::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: 6%;
+  width: 120px; height: 168px;
+  background-image: var(--leaf-svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: .5;
+  transform: rotate(14deg);
+  pointer-events: none;
+}
+body.v2 .hero .wrap { position: relative; z-index: 1; }
+
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -243,6 +307,49 @@ nav.main-nav a:hover {
 .hero-photo img {
   border-radius: 20px;
   box-shadow: 0 24px 48px rgba(24,61,87,.16);
+}
+
+/* Real image slots — fixed aspect ratio, no stretching, one documented
+   object-position per image. Prevents the squeezed/oversized-mobile-image
+   failure mode: the box always keeps its ratio, the img always fills it
+   via object-fit: cover. */
+.img-slot {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 24px 48px rgba(24,61,87,.16);
+  background: var(--bg-light);
+}
+.img-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+}
+.slot-hero-wide { aspect-ratio: 16 / 9; }
+.slot-feature-landscape { aspect-ratio: 3 / 2; }
+.slot-story-portrait { aspect-ratio: 4 / 5; }
+.slot-card-media { aspect-ratio: 4 / 3; }
+.slot-closing-banner { aspect-ratio: 21 / 9; }
+@media (max-width: 900px) {
+  .slot-hero-wide { aspect-ratio: 4 / 5; }
+  .slot-feature-landscape { aspect-ratio: 4 / 3; }
+  .slot-closing-banner { aspect-ratio: 4 / 3; }
+}
+
+/* One ambient motion option per page: a very slow media pan/zoom on the
+   primary hero image only. Nothing else on a page gets this treatment. */
+.img-slot.ambient-zoom img {
+  animation: heroZoom 26s ease-in-out infinite alternate;
+}
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.055); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .img-slot.ambient-zoom img { animation: none; }
 }
 
 .hero-line-small {
@@ -262,6 +369,12 @@ nav.main-nav a:hover {
   border-radius: 18px;
   box-shadow: 0 10px 28px rgba(24,61,87,.06);
   padding: 32px;
+}
+
+/* Card hover lift — scoped to the rebuilt pages only. */
+body.v2 .card { transition: transform .2s ease, box-shadow .2s ease; }
+@media (prefers-reduced-motion: no-preference) {
+  body.v2 .card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(24,61,87,.12); }
 }
 
 .card-emphasis {
@@ -781,20 +894,25 @@ footer.site-footer .footer-copy {
 
 .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-/* Textured statement band — used when no photo is available for a slot */
+/* Textured statement band — used when no photo is available for a slot.
+   Layered, blended navy/teal/green gradient, not a flat color wash. */
 .statement-band {
   position: relative;
-  border-radius: 24px;
-  padding: 56px 48px;
-  background: linear-gradient(135deg, var(--navy), #12293C);
+  border-radius: 28px;
+  padding: 60px 52px;
+  background:
+    radial-gradient(480px 360px at 92% -15%, rgba(154,197,125,.30), transparent 60%),
+    radial-gradient(420px 320px at -10% 115%, rgba(18,113,113,.35), transparent 60%),
+    linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 65%, #0B1D2C 100%);
   overflow: hidden;
+  box-shadow: 0 28px 60px rgba(15,36,56,.28);
 }
 .statement-band::before,
 .statement-band::after {
   content: '';
   position: absolute;
   border-radius: 50%;
-  opacity: .16;
+  opacity: .18;
 }
 .statement-band::before {
   width: 260px; height: 260px;
@@ -803,13 +921,94 @@ footer.site-footer .footer-copy {
 }
 .statement-band::after {
   width: 200px; height: 200px;
-  background: var(--blue);
+  background: var(--teal-light);
   bottom: -80px; left: -40px;
+}
+.statement-band .band-leaf {
+  position: absolute;
+  top: 18px; right: 6%;
+  width: 84px; height: 118px;
+  background-image: var(--leaf-svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: .16;
+  transform: rotate(-10deg);
+  pointer-events: none;
 }
 .statement-band > * { position: relative; z-index: 1; }
 .statement-band p, .statement-band h2, .statement-band h3 { color: var(--white); }
 .statement-band .hero-body, .statement-band .section-intro-body { color: #C8D6E0; }
 .statement-band .section-heading::before { background: var(--green); }
+
+/* Fully-designed blended-gradient hero for a page with no photo (currently
+   Become a DSP). Deeper and more layered than .statement-band since it
+   carries the whole opening moment, not a mid-page callout. Its one
+   ambient-motion allowance is a slow-drifting leaf accent (no hero photo
+   here to give the slow-zoom treatment to instead). */
+.gradient-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 104px 0 92px;
+  background:
+    radial-gradient(620px 460px at 84% -12%, rgba(154,197,125,.30), transparent 62%),
+    radial-gradient(520px 420px at 6% 108%, rgba(79,163,160,.35), transparent 60%),
+    radial-gradient(900px 700px at 50% 40%, rgba(18,113,113,.14), transparent 70%),
+    linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 55%, #0A1B29 100%);
+}
+.gradient-hero .wrap { position: relative; z-index: 2; max-width: 780px; }
+.gradient-hero .pill {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.24);
+  color: var(--green);
+}
+.gradient-hero h1 { color: var(--white); margin-bottom: 18px; }
+.gradient-hero .hero-body { color: #CFE0DC; margin-bottom: 28px; }
+.gradient-hero .hero-line-small { color: #9FB4C4; }
+.gradient-hero .family-link-line { color: #CFE0DC; }
+.gradient-hero .family-link-line a { color: var(--green); }
+
+.gradient-hero .leaf-accent {
+  position: absolute;
+  background-image: var(--leaf-svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+.gradient-hero .leaf-accent.leaf-1 {
+  top: -40px; right: 10%;
+  width: 160px; height: 224px;
+  opacity: .22;
+  transform: rotate(16deg);
+}
+.gradient-hero .leaf-accent.leaf-2 {
+  bottom: -60px; left: 4%;
+  width: 110px; height: 154px;
+  opacity: .14;
+  transform: rotate(-24deg) scaleX(-1);
+}
+.gradient-hero .leaf-accent.leaf-3 {
+  top: 30%; right: -30px;
+  width: 70px; height: 98px;
+  opacity: .12;
+  transform: rotate(-6deg);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .gradient-hero .leaf-accent.leaf-1 { animation: leafDrift 14s ease-in-out infinite; }
+  .gradient-hero .leaf-accent.leaf-3 { animation: leafDrift 18s ease-in-out infinite reverse; }
+}
+@keyframes leafDrift {
+  0%, 100% { transform: translateY(0) rotate(16deg); }
+  50% { transform: translateY(14px) rotate(12deg); }
+}
+@media (max-width: 900px) {
+  .gradient-hero { padding: 64px 0 44px; }
+  .gradient-hero .pill { margin-bottom: 16px; }
+  .gradient-hero h1 { margin-bottom: 16px; }
+  .gradient-hero .hero-body { margin-bottom: 22px; }
+  .gradient-hero .leaf-accent.leaf-1 { width: 110px; height: 154px; }
+  .gradient-hero .leaf-accent.leaf-3 { display: none; }
+}
 
 /* Accessible FAQ accordion (real buttons, aria-expanded/controls) */
 .accordion-item {
@@ -923,6 +1122,10 @@ footer.site-footer .footer-copy {
   .statement-band { padding: 40px 28px; }
   h1 { font-size: 38px; }
   h2 { font-size: 30px; }
+  /* Same specificity as the body.v2 base rule, later in source order, so
+     this correctly wins on mobile instead of the 56px/40px desktop sizes. */
+  body.v2 h1 { font-size: 34px; line-height: 1.14; }
+  body.v2 h2 { font-size: 27px; line-height: 1.2; }
 
   .hero-inner,
   .split-section,
