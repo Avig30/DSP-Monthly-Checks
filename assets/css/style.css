@@ -177,7 +177,12 @@ nav.main-nav a {
 }
 
 nav.main-nav a.active-accent {
-  color: var(--teal);
+  color: var(--teal-dark);
+  font-weight: 800;
+  background: var(--green-tint);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin: -6px -14px;
 }
 
 nav.main-nav a:hover {

@@ -30,22 +30,84 @@
      and spacing all reuse the shared CSS custom properties.
      assets/css/style.css itself is not touched. -->
 <style>
-  .promise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
-  .promise-item { text-align: center; }
-  .promise-icon { font-size: 34px; margin-bottom: 14px; }
+  /* Section heading kicker bar - bolder type hierarchy for this page */
+  .section-heading { position: relative; }
+  .section-heading::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--teal);
+    margin-bottom: 16px;
+  }
+  .section-heading.text-center::before { margin-left: auto; margin-right: auto; }
+
+  /* Shared two-column content row (heading/text either side, or text + photo) */
+  .content-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .content-row .hero-photo img { width: 100%; }
+
+  /* Decorative soft background shapes (liveliness, purely visual) */
+  .soft-shape-bg { position: relative; overflow: hidden; }
+  .soft-shape-bg::before,
+  .soft-shape-bg::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .soft-shape-bg::before {
+    width: 380px;
+    height: 380px;
+    background: var(--green-tint);
+    top: -140px;
+    right: -100px;
+    opacity: .8;
+  }
+  .soft-shape-bg::after {
+    width: 300px;
+    height: 300px;
+    background: #E4F0F4;
+    bottom: -120px;
+    left: -80px;
+    opacity: .7;
+  }
+  .soft-shape-bg > .wrap { position: relative; z-index: 1; }
+
+  .promise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .promise-item {
+    text-align: center;
+    background: var(--white);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 32px 26px;
+    box-shadow: 0 10px 28px rgba(24,61,87,.05);
+  }
+  .promise-icon {
+    font-size: 28px;
+    margin: 0 auto 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--green-tint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .promise-item h3 { font-size: 18px; margin-bottom: 8px; }
   .promise-item p { color: var(--muted); font-size: 15.5px; }
 
-  .feature-row {
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-    padding: 28px 0;
-    border-bottom: 1px solid var(--card-border);
-  }
-  .feature-row:last-child { border-bottom: none; }
-  .feature-row:nth-child(even) { flex-direction: row-reverse; }
-  .feature-icon {
+  /* "What you get with ASG" - true 2x2 benefit grid at full container width */
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .benefit-card { display: flex; flex-direction: column; gap: 14px; }
+  .benefit-icon {
     flex-shrink: 0;
     width: 56px;
     height: 56px;
@@ -56,8 +118,14 @@
     justify-content: center;
     font-size: 26px;
   }
-  .feature-text h3 { font-size: 19px; margin-bottom: 8px; }
-  .feature-text p { color: var(--muted); font-size: 15.5px; }
+  .benefit-card h3 { font-size: 19px; margin-bottom: 8px; }
+  .benefit-card p { color: var(--muted); font-size: 15.5px; }
+
+  .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+  .faq-layout { display: grid; grid-template-columns: minmax(260px, 320px) 1fr; gap: 48px; align-items: start; }
+  .faq-layout .faq-intro { position: sticky; top: 96px; }
+  .faq-layout .faq-intro p { color: var(--muted); font-size: 15.5px; margin-top: 14px; }
 
   .compare-intro { color: var(--muted); font-size: 16px; margin-bottom: 28px; }
   .compare-table {
@@ -170,7 +238,13 @@
 
   @media (max-width: 900px) {
     .promise-grid { grid-template-columns: 1fr; }
-    .feature-row, .feature-row:nth-child(even) { flex-direction: column; }
+    .benefit-grid { grid-template-columns: 1fr; }
+    .card-grid-3 { grid-template-columns: 1fr; }
+    .content-row { grid-template-columns: 1fr; gap: 32px; }
+    .content-row .hero-photo { order: -1; }
+    .faq-layout { grid-template-columns: 1fr; gap: 24px; }
+    .faq-layout .faq-intro { position: static; }
+    .soft-shape-bg::before, .soft-shape-bg::after { display: none; }
   }
 </style>
 </head>
@@ -186,7 +260,7 @@
     </button>
     <nav class="main-nav">
       <a href="/">Home</a>
-      <a href="/family-caregivers/" class="active-accent">Get Paid to Care for Family</a>
+      <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
       <a href="/find-a-dsp/">Find a DSP</a>
       <a href="/become-a-dsp/">Become a DSP</a>
@@ -218,52 +292,47 @@
 
 <!-- SECTION 2 - IS THIS PAGE FOR YOU -->
 <section class="bg-white reveal">
-  <div class="wrap">
-    <div class="section-intro" style="margin-bottom: 0;">
+  <div class="wrap content-row">
+    <div>
       <h2 class="section-heading">Is this page for you?</h2>
       <p class="section-intro-body" style="margin-top: 18px;">This page is for families of an adult with an intellectual or developmental disability — including autism — in New Jersey. If your loved one is enrolled with NJ DDD, or might be eligible, you're in the right place. This isn't eldercare or paid family leave — it's the DDD path to getting paid as your loved one's caregiver.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="/assets/img/pfcp-family-intro.webp" alt="A New Jersey mother and father embracing their adult daughter, who has Down syndrome, outdoors" loading="lazy">
     </div>
   </div>
 </section>
 
 <!-- SECTION 3 - YOU'VE DONE THIS WORK FOR YEARS -->
 <section class="bg-light reveal">
-  <div class="wrap">
-    <div class="section-intro" style="margin-bottom: 0;">
-      <h2 class="section-heading">You've done this work for years. Now it can pay.</h2>
-      <p class="section-intro-body" style="margin-top: 18px;">Years of appointments, routines, and advocacy - you've already done the hard part. <a href="/about/">ASG's</a> Paid Family Care Program hires family members as paid <a href="/services/">Direct Support Professionals</a>, with training, backup when available, and one person who stays with you from the first call.</p>
-    </div>
+  <div class="wrap content-row">
+    <h2 class="section-heading">You've done this work for years. Now it can pay.</h2>
+    <p class="section-intro-body">Years of appointments, routines, and advocacy - you've already done the hard part. <a href="/about/">ASG's Paid Family Care Program</a> hires family members as paid <a href="/services/">Direct Support Professionals</a>, with training, backup when available, and one person who stays with you from the first call.</p>
   </div>
 </section>
 
 <!-- SECTION 4 - WHAT YOU GET WITH ASG -->
 <section class="bg-white reveal">
-  <div class="wrap" style="max-width: 820px;">
+  <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 32px;">What you get with ASG</h2>
-    <div class="feature-row">
-      <div class="feature-icon">💰</div>
-      <div class="feature-text">
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
         <h3>An honest starting rate.</h3>
         <p>Pay starts at $25 an hour. Your exact rate depends on the approved service, your approved hours, and the available budget - confirmed in writing before you start. We quote you a starting rate, not a best-case number.</p>
       </div>
-    </div>
-    <div class="feature-row">
-      <div class="feature-icon">🌿</div>
-      <div class="feature-text">
+      <div class="benefit-card">
+        <div class="benefit-icon">🌿</div>
         <h3>A break when you need one.</h3>
         <p>ASG may help arrange a trained DSP when coverage is available - so you can rest, run errands, or just breathe. It's arranged when possible, never promised.</p>
       </div>
-    </div>
-    <div class="feature-row">
-      <div class="feature-icon">🎓</div>
-      <div class="feature-text">
+      <div class="benefit-card">
+        <div class="benefit-icon">🎓</div>
         <h3>Training and a team - no experience needed.</h3>
         <p>We train you, coach you, and stay in contact. You bring the relationship; we bring the rest.</p>
       </div>
-    </div>
-    <div class="feature-row">
-      <div class="feature-icon">🧾</div>
-      <div class="feature-text">
+      <div class="benefit-card">
+        <div class="benefit-icon">🧾</div>
         <h3>We carry the employer load.</h3>
         <p>Agency administration, payroll, and taxes - ASG handles them, so you can focus on your family.</p>
       </div>
@@ -272,9 +341,9 @@
 </section>
 
 <!-- SECTION 5 - WE'RE WITH YOU THE WHOLE WAY -->
-<section class="bg-light reveal">
+<section class="bg-light reveal soft-shape-bg">
   <div class="wrap">
-    <h2 class="section-heading text-center" style="margin-bottom: 44px;">We're with you the whole way</h2>
+    <h2 class="section-heading text-center" style="margin-bottom: 32px;">We're with you the whole way</h2>
     <div class="promise-grid">
       <div class="promise-item">
         <div class="promise-icon">💬</div>
@@ -297,20 +366,25 @@
 
 <!-- SECTION 6 - WHO QUALIFIES -->
 <section class="bg-white reveal">
-  <div class="wrap">
-    <h2 class="section-heading" style="margin-bottom: 36px;">Who qualifies?</h2>
-    <div style="display: flex; flex-direction: column; gap: 22px; max-width: 820px;">
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>Your loved one is an adult New Jersey resident with a documented intellectual or developmental disability, enrolled with NJ DDD or likely eligible. Not sure about their status? We'll explain how DDD eligibility works and where support coordination fits.</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>You - a parent, sibling, relative, or trusted person - may be considered for the paid caregiver role, depending on the approved service and our normal hiring requirements. No experience needed; we train you.</p>
-      </div>
-      <div class="check-item">
-        <span class="check-glyph">✓</span>
-        <p>Tell us about your situation and share your support coordinator's contact information - that's all we need from you. From there, ASG guides you through onboarding, training, and hiring, step by step. With your permission, we coordinate the program directly with your support coordinator - and we handle the agency administration, payroll, and taxes.</p>
+  <div class="wrap content-row">
+    <div class="hero-photo">
+      <img src="/assets/img/pfcp-family-qualify.webp" alt="A New Jersey mother and father sitting closely with their adult daughter, who has Down syndrome, at an outdoor table" loading="lazy">
+    </div>
+    <div>
+      <h2 class="section-heading" style="margin-bottom: 24px;">Who qualifies?</h2>
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div class="check-item">
+          <span class="check-glyph">✓</span>
+          <p>Your loved one is an adult New Jersey resident with a documented intellectual or developmental disability, enrolled with NJ DDD or likely eligible. Not sure about their status? We'll explain how DDD eligibility works and where support coordination fits.</p>
+        </div>
+        <div class="check-item">
+          <span class="check-glyph">✓</span>
+          <p>You - a parent, sibling, relative, or trusted person - may be considered for the paid caregiver role, depending on the approved service and our normal hiring requirements. No experience needed; we train you.</p>
+        </div>
+        <div class="check-item">
+          <span class="check-glyph">✓</span>
+          <p>Tell us about your situation and share your support coordinator's contact information - that's all we need from you. From there, ASG guides you through onboarding, training, and hiring, step by step. With your permission, we coordinate the program directly with your support coordinator - and we handle the agency administration, payroll, and taxes.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -352,7 +426,7 @@
     <div class="ddd-resources">
       <strong>Official NJ DDD resources</strong>
       <ul>
-        <li><a href="https://www.state.nj.us/humanservices/ddd/individuals/community/selfdirected">NJ DDD: Self-Directed Services</a></li>
+        <li><a href="https://nj.gov/humanservices/ddd/individuals/access-services/self-direction/">NJ DDD: Self-Direction Options and Education</a></li>
         <li><a href="https://www.nj.gov/humanservices/ddd/documents/individuals/sde-models-side-by-side.pdf">NJ DDD: Self-Direction Models Side-by-Side (PDF)</a></li>
       </ul>
     </div>
@@ -363,7 +437,7 @@
 <section class="bg-white reveal">
   <div class="wrap">
     <h2 class="section-heading" style="margin-bottom: 44px;">How it works: three steps</h2>
-    <div class="card-grid">
+    <div class="card-grid card-grid-3">
       <div class="card">
         <div class="step-circle">1</div>
         <h3>Tell us about your family.</h3>
@@ -398,8 +472,12 @@
 
 <!-- SECTION 10 - FAQ -->
 <section class="bg-white reveal">
-  <div class="wrap" style="max-width: 820px;">
-    <h2 class="section-heading" style="margin-bottom: 32px;">Questions families ask</h2>
+  <div class="wrap faq-layout">
+    <div class="faq-intro">
+      <h2 class="section-heading">Questions families ask</h2>
+      <p>Plain answers to what families ask us most before they call.</p>
+    </div>
+    <div>
 
     <details class="faq-item">
       <summary><h3>Can a family member really get paid to provide care in New Jersey?</h3></summary>
@@ -450,6 +528,8 @@
       <summary><h3>What if my loved one isn't confirmed with DDD yet?</h3></summary>
       <p class="faq-answer">That's okay - many families start here. We'll explain how DDD eligibility works and where support coordination fits.</p>
     </details>
+
+    </div>
   </div>
 </section>
 
@@ -510,11 +590,11 @@
   <div class="wrap text-center" style="max-width: 700px;">
     <strong style="display:block; color: var(--navy); text-transform: uppercase; letter-spacing: .06em; font-size: 13px; margin-bottom: 10px;">Official NJ DDD resources</strong>
     <p style="font-size: 14.5px; color: var(--muted); margin-bottom: 10px;">
-      <a href="https://www.state.nj.us/humanservices/ddd/individuals/community/selfdirected" style="color: var(--teal); font-weight: 700;">NJ DDD: Self-Directed Services</a>
+      <a href="https://nj.gov/humanservices/ddd/individuals/access-services/self-direction/" style="color: var(--teal); font-weight: 700;">NJ DDD: Self-Direction Options and Education</a>
       ·
       <a href="https://www.nj.gov/humanservices/ddd/documents/individuals/sde-models-side-by-side.pdf" style="color: var(--teal); font-weight: 700;">Self-Direction Models Side-by-Side (PDF)</a>
     </p>
-    <p style="font-size: 14.5px; color: var(--muted);"><a href="/" style="color: var(--teal); font-weight: 700;">ASG</a> is a DDD-approved provider serving all 21 New Jersey counties. Have a question? <a href="/contact/" style="color: var(--teal); font-weight: 700;">Contact ASG</a>.</p>
+    <p style="font-size: 14.5px; color: var(--muted);">ASG is a DDD-approved provider serving all 21 New Jersey counties. Have a question? <a href="/contact/" style="color: var(--teal); font-weight: 700;">Contact ASG</a>.</p>
   </div>
 </section>
 
