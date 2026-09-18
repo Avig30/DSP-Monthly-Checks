@@ -42,16 +42,17 @@
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
       <img src="/assets/img/logo.png" alt="ASG Home Care logo">
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="/">Home</a>
       <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
@@ -65,7 +66,7 @@
 </header>
 
 <!-- SECTION 1 - HERO with inline proof row (no separate stats-bar section) -->
-<section class="hero reveal">
+<section class="hero reveal" id="main">
   <div class="wrap-wide hero-inner">
     <div>
       <span class="eyebrow-lg">DDD-approved agency · New Jersey</span>

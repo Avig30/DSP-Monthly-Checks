@@ -26,16 +26,17 @@
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
       <img src="/assets/img/logo.png" alt="ASG Home Care logo">
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="/">Home</a>
       <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
@@ -49,7 +50,7 @@
 </header>
 
 <!-- SECTION 1 - PHOTO HERO (image left, reversed from Home's image-right hero) -->
-<section class="hero reveal">
+<section class="hero reveal" id="main">
   <div class="wrap-wide editorial-row image-left" style="align-items: center;">
     <div class="img-frame" style="--ar:4/5;--ar-m:4/5;--fx:50% 30%;">
       <img src="/assets/img/about-park-bench.webp" alt="A man laughing while holding fidget spinners at an outdoor park bench" loading="eager">

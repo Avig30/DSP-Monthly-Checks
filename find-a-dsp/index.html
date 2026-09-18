@@ -26,16 +26,17 @@
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-link">
       <img src="/assets/img/logo.png" alt="ASG Home Care logo">
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="/">Home</a>
       <a href="/family-caregivers/">Get Paid to Care for Family</a>
       <a href="/services/">Services</a>
@@ -50,7 +51,7 @@
 
 <!-- SECTION 1 - DESIGNED GRADIENT HERO (no photo; see IMAGE-SOURCES.md
      for why - avoids reusing the protected page's boxing photo) -->
-<section class="hero-gradient reveal" style="--tone-a: var(--teal); --tone-b: var(--blue); --tone-c: var(--green);">
+<section class="hero-gradient reveal" id="main" style="--tone-a: var(--teal); --tone-b: var(--blue); --tone-c: var(--green);">
   <span class="leaf-accent" style="top: 12%; left: 6%; font-size: 64px;">🍃</span>
   <span class="leaf-accent" style="bottom: 10%; right: 8%; font-size: 48px;">🍃</span>
   <div class="wrap-narrow" style="max-width: 760px;">
