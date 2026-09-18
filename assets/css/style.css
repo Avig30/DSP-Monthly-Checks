@@ -1240,8 +1240,11 @@ a:focus-visible {
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
 }
-.callout-banner p { color: var(--body-text); font-size: 16px; font-weight: 600; }
-.callout-banner a.callout-link { color: var(--teal-dark); font-weight: 800; white-space: nowrap; }
+.callout-banner p { color: var(--body-text); font-size: 16px; font-weight: 600; min-width: 0; }
+.callout-banner a.callout-link { color: var(--teal-dark); font-weight: 800; }
+@media (max-width: 900px) {
+  .callout-banner { flex-direction: column; align-items: flex-start; }
+}
 
 /* Alternating vertical timeline (distinct from .process-rail's
    horizontal connected-circle layout) */
